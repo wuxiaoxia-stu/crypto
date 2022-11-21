@@ -1,0 +1,6 @@
+SDK aar 开发地址:http://192.168.0.11:8081/svn/netca/产品/统一介质管理工具/trunk/src/Android/NetcaCryptoAndroid
+测试地址:http://192.168.0.11:8081/svn/rdrelease/软件发布/统一介质管理工具/install/测试版/标准版/Android/Android 中间件
+打包地址:http://192.168.0.11:8081/svn/rdrelease/软件发布/统一介质管理工具/install/测试版/标准版/Android/Android 中间件/xxx版本
+打包地址:http://192.168.0.11:8081/svn/rdrelease/软件发布/NETCA_CRYPTO/current/例子/Android的例子/SDKDemo/xxx.zip
+开发文档地址:http://192.168.0.11:8081/svn/netca/产品/统一介质管理工具/trunk/docs/移动端/Android/Android NETCA PKI中间件SDK接口说明.docx
+发布文档地址:http://192.168.0.11:8081/svn/rdrelease/软件发布/NETCA_CRYPTO/current/文档/Android/Android NETCA PKI中间件SDK接口说明.docx

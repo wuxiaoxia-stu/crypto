@@ -1,0 +1,32 @@
+{
+    "NetcaSelfServiceURL"       : "http://192.168.200.208:8080/um/index.html",
+    "needPuhuaKey"              : 0,
+    "needSoftwareDeviceKey"     : 0,
+    
+    "puhua":
+    {
+        "server_ip"     : "119.135.178.206",
+        "server_port"   : 8082,
+        "appId"         : "zNCCUwMdqRw2ScHvVuuM",
+        "appSecret"     : "GpMk1gXWZcBzSKILrSyylzhu0UwDFBiv49Dc3eIoLem5SvoKNYmFh4Po0nLtj6hQ"
+    },
+    
+    "SoftwareDeviceConfig":
+    {
+        "DefaultMethod":2,
+        "DefaultServerAddress":"https://192.168.200.58:8443/softCertInterface/allService",
+        "DefaultServerParam":"TLS",
+        "RSAMethod":2,
+        "RSAServerAddress":"https://192.168.200.58:8443/softCertInterface/allService",
+        "RSAServerParam":"TLS",
+        "ImportRSAMethod":2,
+        "ImportRSAServerAddress":"https://192.168.200.58:8443/softCertInterface/allService",
+        "ImportRSAServerParam":"TLS",
+        "SM2Method":2,
+        "SM2ServerAddress":"https://192.168.200.58:8443/softCertInterface/allService",
+        "SM2ServerParam":"TLS",
+        "ImportSM2Method":2,
+        "ImportSM2ServerAddress":"https://192.168.200.58:8443/softCertInterface/allService",
+        "ImportSM2ServerParam":"TLS"
+    }
+}

@@ -1,0 +1,6 @@
+framework module NetcaCryptoSDK {
+  umbrella header "NetcaCryptoSDK.h"
+
+  export *
+  module * { export * }
+}

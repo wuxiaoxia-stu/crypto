@@ -1,0 +1,7 @@
+[SRJ1401]
+class=NETWORK
+sopath=libsrj1401prov.so
+type=110
+Server=1
+MultiDevice=1
+signature=coTs8t25ZHlc+KlaEElkH0DA+wQiGEhzabbl2i1yXlqEmGye4tJI1BvG8lyp6m2AJEFzngfnk7CU+91AigzmAo9KoAIAKY3SqHUOmzyinpuF71t+dmZHdqzf/huA+7zExIklOunfjsvbJcIwIMRN7kJCChoKzQrkxtfOsmmohqg=

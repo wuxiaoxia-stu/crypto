@@ -1,0 +1,6 @@
+framework module NetcaMKeyDevice {
+  umbrella header "NetcaMKeyDevice.h"
+
+  export *
+  module * { export * }
+}

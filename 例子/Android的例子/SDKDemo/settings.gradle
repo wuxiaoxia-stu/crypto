@@ -1,0 +1,18 @@
+include ':netca_crypto',
+		':netca_view',
+        ':Test',
+        ':pdfbox_android',
+        ':longmai',
+        ':feitian_ble',
+        ':feitian_otg',
+        ':huadasdkey',
+        ':haitai_otg',
+		':sclib',
+		':puhuamobilekey',
+		':netcasoftwarekey',
+        ':eskey_ble',
+        ':netca_view',
+		':haitai_ble',
+		':yingdaxing_sdkey',
+        ':mkey_sdk_device'
+

@@ -1,0 +1,35 @@
+OBJ_D=tmp
+CPP=g++
+CC=gcc
+
+INC_PATH_FLAG=-I. -Iinclude -Iinclude/other
+CFLAG= -m32 -fPIC -Wall -O2 ${INC_PATH_FLAG} -DUNIX
+CPPFLAG=-m32 -fPIC -Wall -O2 ${INC_PATH_FLAG} -DUNIX
+LINK=${CC}
+ 
+EXT_LIBS= -lsrj1401DevAPI -lsrj1401pkcs11 -lnetca_crypto -lnetca_util
+
+LFLAGS= -L${HOME}/lib
+RM=rm
+MKDIR=mkdir
+
+OBJECTS=${OBJ_D}/GetKeyPairStatus.o
+
+all:GetKeyPairStatus
+
+${OBJ_D}/GetKeyPairStatus.o:GetKeyPairStatus.c
+	${CC} ${CFLAG} -c -g GetKeyPairStatus.c -o ${OBJ_D}/GetKeyPairStatus.o
+
+$(OBJ_D):
+	${MKDIR} ${OBJ_D}
+
+GetKeyPairStatus: ${OBJ_D} ${OBJECTS}
+	${LINK} ${LFLAGS} ${OBJECTS} ${EXT_LIBS} -m32 -o GetKeyPairStatus && chmod 777 GetKeyPairStatus
+
+clean:
+	${RM} -rf ${OBJ_D}
+	
+
+
+	
+

@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qyx-f2-3Kd">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--NetcaCryptoSDK DEMO-->
+        <scene sceneID="4Xo-C6-axc">
+            <objects>
+                <viewController id="te1-9b-Zap" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SiT-J5-DbD"/>
+                        <viewControllerLayoutGuide type="bottom" id="R1v-cx-HYP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hX1-WN-V5g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qml-HS-Dms">
+                                <rect key="frame" x="0.0" y="44" width="375" height="956"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2g-ck-7I3">
+                                        <rect key="frame" x="11" y="94" width="92" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="读取签名证书"/>
+                                        <connections>
+                                            <action selector="selectSignCertTapped:" destination="te1-9b-Zap" eventType="touchUpInside" id="7mu-I6-COF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XO8-4i-7G3">
+                                        <rect key="frame" x="198" y="537" width="77" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="二维码签名"/>
+                                        <connections>
+                                            <action selector="qrcodeSignTapped:" destination="te1-9b-Zap" eventType="touchUpInside" id="azy-29-jz2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zgu-M7-dVs">
+                                        <rect key="frame" x="201" y="94" width="92" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="读取加密证书"/>
+                                        <connections>
+                                            <action selector="selectEncCertTapped:" destination="te1-9b-Zap" eventType="touchUpInside" id="ArM-80-jdy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6s-Zl-idT">
+                                        <rect key="frame" x="11" y="201" width="168" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="SignedData签名验签"/>
+                                        <connections>
+                                            <action selector="signedDataTapped:" destination="te1-9b-Zap" eventType="touchUpInside" id="Ahk-a7-m6S"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNd-x9-VnQ">
+                                        <rect key="frame" x="11" y="285" width="77" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="非对称加密"/>
+                                        <connections>
+                                            <action selector="encryptTapped:" destination="te1-9b-Zap" eventType="touchUpInside" id="coF-dD-kR5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Bm-gx-NBj">
+                                        <rect key="frame" x="201" y="285" width="92" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="非对称解密"/>
+                                        <connections>
+                                            <action selector="decryptTapped:" destination="te1-9b-Zap" eventType="touchUpInside" id="HiG-Ww-GFs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUp-M1-6yB">
+                                        <rect key="frame" x="11" y="323" width="92" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="数字信封加密"/>
+                                        <connections>
+                                            <action selector="EnvEncTapped:" destination="te1-9b-Zap" eventType="touchUpInside" id="jqr-Fh-O3M"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58L-Qq-2OY">
+                                        <rect key="frame" x="11" y="413" width="77" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="大文件签名"/>
+                                        <connections>
+                                            <action selector="BigFileSignTapped:" destination="te1-9b-Zap" eventType="touchUpInside" id="JYO-al-7mt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3WO-ka-U7p">
+                                        <rect key="frame" x="198" y="413" width="165" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="大文件SignedData签名"/>
+                                        <connections>
+                                            <action selector="BigFileSignedDataTapped:" destination="te1-9b-Zap" eventType="touchUpInside" id="GVG-BB-iuk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWQ-Hz-7f2">
+                                        <rect key="frame" x="11" y="445" width="138" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="大文件数字信封加密"/>
+                                        <connections>
+                                            <action selector="BigFileEnvEncTapped:" destination="te1-9b-Zap" eventType="touchUpInside" id="aK9-gx-zWI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="naR-Kx-p0O">
+                                        <rect key="frame" x="201" y="163" width="92" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="对Hash签名"/>
+                                        <connections>
+                                            <action selector="signHashTapped:" destination="te1-9b-Zap" eventType="touchUpInside" id="LXp-Nl-mbr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Okf-WE-IK1">
+                                        <rect key="frame" x="11" y="537" width="77" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="扫描二维码"/>
+                                        <connections>
+                                            <action selector="qrcodeScanTapped:" destination="te1-9b-Zap" eventType="touchUpInside" id="ORs-DD-bJn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kED-HI-Wpk">
+                                        <rect key="frame" x="11" y="56" width="62" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="申请证书"/>
+                                        <connections>
+                                            <action selector="applyCertificateTapped:" destination="te1-9b-Zap" eventType="touchUpInside" id="4RF-93-mWc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A6Y-Qd-duJ">
+                                        <rect key="frame" x="201" y="56" width="92" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="连接蓝牙Key"/>
+                                        <connections>
+                                            <action selector="bleConnectTapped:" destination="te1-9b-Zap" eventType="touchUpInside" id="dcV-KP-uxZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yuo-Uk-rof">
+                                        <rect key="frame" x="201" y="323" width="92" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="数字信封解密"/>
+                                        <connections>
+                                            <action selector="EnvDecTapped:" destination="te1-9b-Zap" eventType="touchUpInside" id="L1u-Yq-b35"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="27Y-KQ-Mgi">
+                                        <rect key="frame" x="201" y="445" width="138" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="大文件数字信封解密"/>
+                                        <connections>
+                                            <action selector="BigFileEnvDecTapped:" destination="te1-9b-Zap" eventType="touchUpInside" id="tAS-2s-Tcp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u4I-pR-gPd">
+                                        <rect key="frame" x="14" y="742" width="92" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="配置设备信息"/>
+                                        <connections>
+                                            <action selector="setDeviceConfigInfoTapped:" destination="te1-9b-Zap" eventType="touchUpInside" id="qnD-im-10P"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dfa-CA-Ysa">
+                                        <rect key="frame" x="14" y="780" width="92" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="产生P10"/>
+                                        <connections>
+                                            <action selector="genP10Tapped:" destination="te1-9b-Zap" eventType="touchUpInside" id="j2O-tz-5h3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="by1-ZV-arg">
+                                        <rect key="frame" x="204" y="780" width="62" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="安装证书"/>
+                                        <connections>
+                                            <action selector="installCertTapped:" destination="te1-9b-Zap" eventType="touchUpInside" id="Ky2-F2-VRL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xaZ-0t-kD8">
+                                        <rect key="frame" x="204" y="742" width="62" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="创建设备"/>
+                                        <connections>
+                                            <action selector="createDeviceTapped:" destination="te1-9b-Zap" eventType="touchUpInside" id="nKO-iS-pSP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XuB-Pt-77C">
+                                        <rect key="frame" x="11" y="862" width="153" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="设置口令管理系统地址"/>
+                                        <connections>
+                                            <action selector="setPinManageSystemAddrTapped:" destination="te1-9b-Zap" eventType="touchUpInside" id="pCn-u4-hYR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7yg-m3-6Au">
+                                        <rect key="frame" x="204" y="900" width="62" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="重置密码"/>
+                                        <connections>
+                                            <action selector="resetUserPinTapped:" destination="te1-9b-Zap" eventType="touchUpInside" id="gie-PF-xgv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VvD-pp-qbb">
+                                        <rect key="frame" x="204" y="862" width="108" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="注册管理员密钥"/>
+                                        <connections>
+                                            <action selector="registerSoPinTapped:" destination="te1-9b-Zap" eventType="touchUpInside" id="Ivc-tQ-S4C"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRw-x3-Ebf">
+                                        <rect key="frame" x="11" y="900" width="138" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="请求获取管理员密钥"/>
+                                        <connections>
+                                            <action selector="requestSoPinTapped:" destination="te1-9b-Zap" eventType="touchUpInside" id="Qw9-rw-rSn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DEV-pX-03t">
+                                        <rect key="frame" x="11" y="163" width="62" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="签名验签"/>
+                                        <connections>
+                                            <action selector="signTapped:" destination="te1-9b-Zap" eventType="touchUpInside" id="4ga-QI-Y36"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nkn-4C-Fgs">
+                                        <rect key="frame" x="11" y="651" width="92" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="PDF签名"/>
+                                        <connections>
+                                            <action selector="PDFSignTapped:" destination="te1-9b-Zap" eventType="touchUpInside" id="KQR-FH-sWh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Emw-Xw-Kex">
+                                        <rect key="frame" x="11" y="619" width="92" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="写章"/>
+                                        <connections>
+                                            <action selector="PDFSignTapped:" destination="te1-9b-Zap" eventType="touchUpInside" id="U7n-ac-Ndy"/>
+                                            <action selector="writeSealTapped:" destination="te1-9b-Zap" eventType="touchUpInside" id="HnZ-l9-YNX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5oh-N5-gZn">
+                                        <rect key="frame" x="201" y="619" width="92" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="读章"/>
+                                        <connections>
+                                            <action selector="PDFSignTapped:" destination="te1-9b-Zap" eventType="touchUpInside" id="Swy-dX-Mhy"/>
+                                            <action selector="readSealTapped:" destination="te1-9b-Zap" eventType="touchUpInside" id="d6s-IT-viQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="rzh-hT-8K8"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="szz-nG-yCz"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qml-HS-Dms" firstAttribute="trailing" secondItem="cD3-vq-fHv" secondAttribute="trailing" id="Wyy-JQ-ni8"/>
+                            <constraint firstItem="qml-HS-Dms" firstAttribute="top" secondItem="SiT-J5-DbD" secondAttribute="bottom" id="q7h-Te-JLK"/>
+                            <constraint firstItem="R1v-cx-HYP" firstAttribute="top" secondItem="qml-HS-Dms" secondAttribute="bottom" id="rsH-ej-hoT"/>
+                            <constraint firstItem="qml-HS-Dms" firstAttribute="leading" secondItem="cD3-vq-fHv" secondAttribute="leading" id="wor-pH-ySE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cD3-vq-fHv"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="NetcaCryptoSDK DEMO" id="Sw0-Fp-JXR"/>
+                    <size key="freeformSize" width="375" height="1000"/>
+                    <connections>
+                        <outlet property="scrollView" destination="qml-HS-Dms" id="HIk-Uy-EZ7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5x-yq-blN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2053.5999999999999" y="653.97301349325346"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="og1-9m-ps6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qyx-f2-3Kd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="X01-yz-udf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="te1-9b-Zap" kind="relationship" relationship="rootViewController" id="7Z9-cC-QrD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9By-lk-gCv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1201" y="656"/>
+        </scene>
+    </scenes>
+</document>

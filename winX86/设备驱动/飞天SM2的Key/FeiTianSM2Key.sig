@@ -1,0 +1,3 @@
+飞天SM2的key签名值 (FeiTianSM2Key.dll)
+1. 2013年2月22日更新，对应版本：1.1.1.0
+URkFXbkGUwD1yj7uXQSV5U+193+YbOWTiNTylqHHYoNgG++00MpNFPZiaXNwHC/VWIq04WZi2E7tN7TKaajZZ4ROJ1RByqQqM4KTeIRlCs+yu7LSjdizn8VH2mhUQhzK1mtaE1Gu8iadjFF20UgsWc3N8ifrQdVc+FS5mntmhyw=

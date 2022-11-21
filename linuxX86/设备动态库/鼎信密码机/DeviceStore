@@ -1,0 +1,10 @@
+[DXinDevice]
+class=NETWORK
+sopath=/usr/lib/libdingxinprov.so
+type=112
+mustLogin=0
+ECB2CBC=0
+ECB2CTR=1
+Server=1
+signature=pB2nQEzvQ4/X9bPJAZANOdx9lOWwyBsXDcHnpsq8o4hTeNdzbvEAt4dOSKpkJm4DdIbgwUoiT5wWUgSyt3ys2R//ZgdWmniM5XkpBFDgdFxY2Hj3mqpMrcFdv/Jd0AaZe4VYbaqIyWLKhoDwscVEom183fWwADZgaHuWt+ZDRXs=
+displayName=鼎信加密机

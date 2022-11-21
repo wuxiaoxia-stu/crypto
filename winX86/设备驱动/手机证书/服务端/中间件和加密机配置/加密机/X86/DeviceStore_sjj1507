@@ -1,0 +1,10 @@
+[TASJJ1507]
+class=NETWORK
+sopath=libtasjj1507prov.so
+type=107
+ECB2CTR=1
+Server=1
+NoUnload=1
+MultiDevice=1
+signature=Mwddxa44mRJcfD2KbGzdZ4nMkPhMj1Qb4EPkmpku8HDzKQjKFnGxnMmUxKiAnzNuS552Cz7Hq5O3MxbUyDmqewvINk+Jf3opbooK6mr30sUz9YyRyD+Pjg2U1fOB3v1+fzZPJjeKnwInMG4gzO2j7Jym209mjNHdfmwpqhdd3u0=
+displayName=江南天安加密机

@@ -1,0 +1,10 @@
+[SJK1555]
+class=PCI
+sopath=/usr/local/lib64/libsjk1555prov.so
+type=109
+mustLogin=0
+ECB2CBC=0
+ECB2CTR=0
+Server=1
+signature=mKNXURvoeHTB1Pko1z+q2dFHlNfHFLWstw5UAnoGFMEvf4gfPdnrc8bt/L/eicE5PzhkWSQ85C0WH6JesEYkpH3KXkCo6Z4l8MyzlFjoXMLj/1tfVy8LYGXNOD5DHrNCm5fUvaf7d2DPHNixwHFALpO5tYC80C7D1+aEBmvBH1Q=
+displayName=得安加密卡

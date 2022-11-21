@@ -1,0 +1,3 @@
+这个dll文件是给测评中心演示使用，只有在白名单文件“FT3000GMProv.dll.ini”记录的序列号才能读到
+
+FT3000GMProv.dll.ini放在路径C:\Program Files\NETCA\NETCA_Devices下面（32位和64位操作系统，FT3000GMProv.dll.ini都是放在这个目录下）

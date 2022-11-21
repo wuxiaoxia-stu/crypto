@@ -1,0 +1,7 @@
+[SoftCertificate]
+class=Software
+sopath=libnetcasoftkeyprov.so
+type=52
+Server=0
+MultiDevice=0
+signature=RqAOE+twt3ooGjUPR448cw61694D0ImvQhAw/PJ3o+4VAFwzg8WLGarARyBl/GVyqVzxkScXQ7aM4w90l2aI/WAEG1lWdyql741kj/jBqaXf9pGnSX7uaRElMEN4N3vGyfcIjeG4sV8/JR2IbMMMZ/R0ZvlxvRWGOWvCLgzzFpQ=

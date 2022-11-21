@@ -1,0 +1,7 @@
+[Openssl]
+class=Software
+sopath=libnetcaopensslprov.so
+type=11
+Server=1
+MultiDevice=1
+signature=YOauwSovDKvcq0Xev7Jl44u0AofTl9YfwYM2uorYU3GZr5sejeVjDK1hV7RrGE7mTSFcxqEygOVEf2uQ7BPt5WM9tkCIPl+EwRPSDhKxL/4Q+p75+Db3S6T8hnYIW4iYd8kDlc+e9UiLxDf7ZM5xh32tCskO4JCJU4mpyYcOqrA=

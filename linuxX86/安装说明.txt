@@ -1,0 +1,57 @@
+1、依赖的第三方库
+  当前版本的libnetca_crypto.so.1.7.0依赖于下面的第三方库：sqlite（版本3）、libusb（版本0.1，不是新的版本1.0）、openssl（版本0.9.8，不是新的1.0）、openldap（版本2.3）、gmp。这些库一般都在系统预装有的，如果没有请自己下载安装。
+  注意：在rehat企业版6中默认的安装的openssl的版本是1.0，openldap是2.4这时需要使用rhel6下的libnetca_url.so.1.0.6。如果还需要使用原来的netca_url库则需要安装openssl098e-0.9.8e-17.el6xxx.rpm和compat-openldap-2.3.43-2.el6xxx.rpm
+	在rehat企业版4，要使用rhel4里的文件，而且暂不支持netca_xml库。当前的设备库，暂不支持
+2、安装核心的库
+  把相关的so拷贝到LD_LIBRARY_PATH路径下
+建立如下的符号连接
+ln -s libnetca_asn1.so.1.2.11 libnetca_asn1.so.1
+ln -s libnetca_crypto.so.1.5.1.4 libnetca_crypto.so.1
+ln -s libnetca_log.so.1.0.1 libnetca_log.so.1
+ln -s libnetca_log.so.1.0.1 libnetca_log.so
+ln -s libnetca_url.so.1.0.4 libnetca_url.so.1
+ln -s libnetca_util.so.2.1.3 libnetca_util.so.2
+ln -s libnetca_secretshare.so.1.1.0 libnetca_secretshare.so.1
+3、配置安全环境
+把trust文件拷贝到/etc/.NETCA/cert/trust
+4、配置设备库
+建立/etc/.NETCA/DeviceStore文件，该文件为UTF-8格式的，可以包含BOM也可以不包含。文件格式如下：每个设备项以[设备名]这样的行开头，然后，每个配置项一行，直到文件结束或者遇到另外一个设备项为止。每个配置项的格式为“名称”=“值”，不包含引号。内置的名称如下：
+	class，设备的类别，可以为USB、COM、PCI和NETWORK等
+	idstring，设备的标识，可以有多项。对于USB设备来说格式为Vid_xxxx&Pid_xxxx
+	type，设备的类型，是个10进制数
+	sopath，设备接口实现的SO文件的全路径
+	signature，Base64编码的签名值
+	mustLgoin，为1为设备需要验证用户密码才能使用，为0则不需要。这个是可选项。
+	ECB2CTR，为1则可以根据ECB模式来构造CTR模式，为0则不可以。这个是可选项。
+
+对于得安SM2的加密机来说，设备名为SJJ0929，class为NETWORK，type为102，mustLgoin为1。此外，还需要一个配置文件/etc/.NETCA/SJJ0929Config。其格式和设备库的类似，但是[]内的是加密机名称。配置项不同，内置的名称如下：
+	SerialNumber，加密机的序列号，随便输入，但是不要重复
+	ConfigFileName，加密机的配置文件全路径名
+	HasSM2，为1则支持SM2，否则不支持
+	HasSSF33，为1则支持SSF33，否则不支持
+	HasSM1，为1则支持SM1，否则不支持
+注意：对于得安SM2的加密机只支持配置连接密码，不支持逐个密钥对配置密码
+为使用得安SM2的加密机，需要把libdtcsp.so改名为libsjj0929_dtcsp.so，放到LD_LIBRARY_PATH路径下。并在得安加密的配置文件中设置对应的IP地址。
+
+对于普华的加密机来说，设备名为PHSJJ011]，class为NETWORK，type为103。此外，还需要一个配置文件。/etc/.NETCA/SJJ1011KeyPairStatus。其格式为每个配置项一行，每个配置项的格式为“名称”=“值”，不包含引号。内置的名称如下：
+	HasSM1，为1则支持SM1，否则不支持
+	HasSSF33，为1则支持SSF33，否则不支持
+	HasSMS4，为1则支持SMS4，否则不支持
+	KeyPairStatus ,加密机的密钥对信息。从0开始，每个数字一位。0表示不存在密钥对，1表示存在RSA密钥对，2表示存在SM2密钥对，5表示存在RSA密钥对且加密和签名的密钥对一样，6表示存在SM2密钥对且加密和签名的密钥对一样。
+比如：
+01256表示1号索引存在RSA密钥对，2号索引存在SM2密钥对，3号索引存在RSA密钥对，且加密/签名公用，4号索引存在SM2密钥对，且加密/签名公用。
+	为使用普华的加密机，需要把libph_sdf.so拷贝到LD_LIBRARY_PATH路径下。并在/usr/local/phgcs/module.conf下配置对应的IP地址
+	
+5、配置JAVA
+  把NetcaJCrypto.jar放到CLASSPATH路径下或者其他JRE可以装载的位置。
+  把libNetcaJCrypto.so放到java.library.path属性所在目录下。
+
+
+
+	
+
+
+
+
+
+

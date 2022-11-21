@@ -1,0 +1,7 @@
+[SJJ1955-G]
+class=NETWORK
+sopath=/usr/lib64/libfmdeviceprov.so
+type=116
+Server=1
+MultiDevice=1
+signature=LV/yZ2zQoZ9js+Xo/Ty4ioUmZn2Eve2mOj4S0Y43eq5fAA6u0y6IvtI5o+aYCIAx3pKaSMAtLuNU/Xe7nnTU/2pUvbua8iN1nfElP0oUdb1/syZfBXVq4UJ1xqM2bEk1nFJ/ZegPAlOpFrmIJ6Zqeph7ETXfo4rS2b9Ymi03jGA=

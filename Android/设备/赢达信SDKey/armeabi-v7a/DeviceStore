@@ -1,0 +1,7 @@
+[WinTrustSDKey]
+class=COM
+sopath=libWintrustTFProv.so
+type=57
+Server=0
+MultiDevice=0
+signature=Q0oG/B+Ix/v3XtLKPWtrRk3SVh47C+4TWD0vZZwxK6HcrYyKKQtLSFf8XnZNseHPjh9oenAMGTc8WsQ7PQ2Qtb/SImPtKLjrbsLTqtzW4IoC32/i42090eMwj0wO8nebCQqBFy+h1LMH9pXcAO1NIqn6CmDfLrQ6CWcjwCfpQ0M=

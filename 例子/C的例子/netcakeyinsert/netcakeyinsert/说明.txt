@@ -1,0 +1,5 @@
+NetcaCryptoSDK
+lib 链接库文件  带X64表示64位库
+include 头文件  
+netcakeyinsert 是判断 netca 设备是否插入例子
+安装netca 安全客户端就可以使用

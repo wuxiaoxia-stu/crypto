@@ -1,0 +1,6 @@
+[SoftwareDevice]
+class=Software
+sopath=/usr/local/lib/libnetcasoftkeyprov.so
+type=52
+signature=mFc8XrlBHN6RBYfbYuO+h1kh7TtB+VC43oj9Yz/9DznIb2hs+1fMzyLKp0oKwV6Q+7GLsfhSiWRyDWFlFIt8lZFX1nUGnkF6/BY9CZy4sNP/2o2KUto/yUpgn37jR8JvGgQXocd+kRzDKDMKXrBmB1C/ZXW0UKWMNSQWioo5Rtk=
+ImportOnlyEncKeypair=0

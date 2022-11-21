@@ -1,0 +1,43 @@
+openssl软设备说明
+	openssl软设备是使用openssl实现的一个设备DLL。当前提供windows 32位和64版本和linux的rhel5的32位和64版本，rhel6和7的版本暂不支持
+1、设备库的位置
+	openssl软设备的设备库采用文件来保存。
+	windows下为C:\Windows\System32\netcaopenssl.key。注意在64位系统下，32位的应用程序的设备库文件是C:\Windows\SysWOW64\netcaopenssl.key
+	32位的linux下为/etc/.NETCA/netcaopenssl.key
+	64位的linux下为/etc/.NETCA/netcaopenssl.key64
+	安卓的是${HOME}/etc/.NETCA/netcaopenssl.key。注意HOME环境变量通常不存在
+	可以使用NETCA_OPENSSL_DEVICESET_FILENAME这个环境变量的值来覆盖上面的路径
+	此外，序列号为openssl的设备总是存在的，这个设备不能保存密钥对。设备库里的设备的序列号也不能设为openssl。
+2、设备库的容量
+	设备库中最多有500个设备。每个设备可以最多有2个密钥对。每个密钥对最多可以有10个证书
+3、设备库文件的格式
+	设备库文件是个JSON文件，ASCII编码。
+	设备库文件本身是个JSON数组，数组中的每个元素表示一个设备。
+	设备的JSON也是一个数组，一共有三项：第一项是字符串，表示设备序列号；第二项也是字符串，表示设备标签；第三项是数组，表示设备里的所有密钥对，数组里的每一项表示一对密钥对
+	密钥对的JSON也是数组，一共有七项：第一项是数字，表示密钥对的类型；第二项是字符串，表示密钥对的标签；第三项是数字，表示密钥对算法；第四项也是数字，表示密钥对的位数；第五项是字符串，表示Hex编码的公钥；第六项是数组，表示加密的密钥对；第七项也是数组，表示密钥对相关的所有证书，每个元素表示一个证书，是字符串类型，Hex编码的证书
+	加密的密钥对JSON是个数组，一共四项：第一项是数字，表示迭代次数；第二项是字符串，表示Hex编码的盐；第三项也是字符串，表示Hex编码的IV值；第四项也是字符串，表示Hex编码的密文密钥对
+	通常无需了解密钥对JSON的格式，这些都是程序自动生成的。但是没有API可以自己产生设备，因此需要自己构造不包含密钥对的设备。
+例子：
+[ ["sn1","label1",[] ], ["sn2","label2",[] ] ]
+表示有两个设备：
+	第一个设备的设备序列号为sn1,设备标签为label1，没有密钥对
+	第二个设备的设备序列号为sn2,设备标签为label2，没有密钥对
+4、支持的算法
+4.1 Hash算法
+	MD5、SHA-1、SHA-224、SHA-256、SHA-384、SHA-512
+4.2 Mac算法
+	HMAC-MD5、HMAC-SHA1、HMAC-SHA224、HMAC-SHA256、HMAC-SHA384、HMAC-SHA512、AES-CMAC（仅限于Windows）和3DES-CMAC（仅限于Windows）
+4.2 对称加密算法
+	DES ECB模式、DES CBC模式、3DES ECB模式、3DES CBC模式、RC4、RC2 ECB模式、RC2 CBC模式、AES ECB模式、AES CBC模式、AES CTR模式（仅限于Windows，且使用128位的计数器）、AES CCM模式（仅限于Windows）、AES GCM模式（仅限于Windows）和AES XTS模式（仅限于Windows）
+4.3 产生密钥对
+	产生RSA的密钥对（长度不限，实际上受限于openssl的实现），产生P-192、P-224、P-256、P-384、P-521的ECC密钥对（仅限于Windows，linux下暂不支持ECC）
+	序列号为openssl的设备不支持产生持久的密钥对，仅仅支持产生临时的密钥对
+4.4 签名和验证
+	PKCS#1 V1.5的RSA签名、不进行填充的RSA签名、PKCS#1 PSS的RSA签名（仅限于Windows）和ECDSA签名（仅限于Windows）
+4.5 非对称加解密
+	PKCS#1 V1.5的RSA加解密、不进行填充的RSA加解密和PKCS#1 OAEP的RSAh加解密（仅限于Windows）
+4.6 密钥协商
+	ECDH密钥协商（仅限于Windows）和EC CDH的密钥协商（仅限于Windows）。
+5、验证用户密码
+	如果设备中没有密钥对，则任意的密码第一次都能验证通过，以后必须和第一次输入的密码相同才能验证通过。
+	如果设备中有密钥对，则需要能解开设备中所有密钥对的密钥才能验证通过。

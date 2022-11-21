@@ -1,0 +1,35 @@
+OBJ_D=tmp
+CPP=g++
+CC=gcc
+
+INC_PATH_FLAG=-I. -Iinclude
+CFLAG= -m32 -fPIC -Wall -O2 ${INC_PATH_FLAG} -DUNIX
+CPPFLAG=-m32 -fPIC -Wall -O2 ${INC_PATH_FLAG} -DUNIX
+LINK=${CC}
+ 
+EXT_LIBS= -ltass_sjj1507sdf -lpthread
+
+LFLAGS= -L${HOME}/lib64
+RM=rm
+MKDIR=mkdir
+
+OBJECTS=${OBJ_D}/GetKeyPairStatus.o
+
+all:GetKeyPairStatus
+
+${OBJ_D}/GetKeyPairStatus.o:GetKeyPairStatus.c
+	${CC} ${CFLAG} -c -g GetKeyPairStatus.c -o ${OBJ_D}/GetKeyPairStatus.o
+
+$(OBJ_D):
+	${MKDIR} ${OBJ_D}
+
+GetKeyPairStatus: ${OBJ_D} ${OBJECTS}
+	${LINK} ${LFLAGS} ${OBJECTS} ${EXT_LIBS} -m32 -o GetKeyPairStatus && chmod 777 GetKeyPairStatus
+
+clean:
+	${RM} -rf ${OBJ_D}
+	
+
+
+	
+

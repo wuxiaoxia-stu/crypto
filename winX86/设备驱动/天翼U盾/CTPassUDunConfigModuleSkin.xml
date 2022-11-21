@@ -1,0 +1,23 @@
+﻿
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="400,400"  sizebox="4,4,6,6"  mininfo="400,400">
+   <Include source="Default.xml" />
+
+
+    <Style name="combo_style" value="height=&quot;22&quot; textpadding=&quot;4,1,22,1&quot; normalimage=&quot;file='combo.png' source='0,0,100,22' corner='2,2,20,2'&quot; hotimage=&quot;file='combo.png' source='0,22,100,44' corner='2,2,22,2'&quot; pushedimage=&quot;file='combo.png' source='0,44,100,66' corner='2,2,22,2'&quot;" />  
+
+    <VerticalLayout       bkcolor="#FFFFFFFF"     > 
+     
+ 
+        <HorizontalLayout  height="7"/>    
+           <HorizontalLayout  height="25">
+               <Option      name="Option_IsOpenCTPassUDUN_showQrcode"   padding="30,6,8,0"     width="13" height="13"     normalimage="ConfigModule/btn_check_nor.png" hotimage="ConfigModule/btn_check_hover.png"  selectedimage="ConfigModule/btn_check_click.png"/>
+               <Label       name="Label_IsOpenCTPassUDUN_showQrcode"  font="2" text="获取设备时候自动弹出二维码窗口"  width="380"/>
+            </HorizontalLayout >
+
+        
+ 
+    </VerticalLayout>
+</Window>
+
+ 

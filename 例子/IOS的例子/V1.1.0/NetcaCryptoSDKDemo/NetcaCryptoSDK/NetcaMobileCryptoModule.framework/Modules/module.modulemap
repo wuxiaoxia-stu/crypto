@@ -1,0 +1,6 @@
+framework module NetcaMobileCryptoModule {
+  umbrella header "NetcaMobileCryptoModule.h"
+
+  export *
+  module * { export * }
+}

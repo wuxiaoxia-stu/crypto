@@ -1,0 +1,98 @@
+版本5.7.0
+NETCA_CRYPTO.dll 		5.7.0.3
+NETCA_ASN1.dll			1.5.12.1
+NETCA_URL.dll			1.0.12.0
+NETCA_URL2.dll			1.0.2.0
+NETCA_UTIL.dll			2.5.5.0
+NetcaJCrypto.dll		5.7.0.2
+NetcaJCrypto.jar		5.7.0.1
+netcajce.jar
+Netca.Pki.dll			5.7.0.0		
+
+版本5.6.2
+NETCA_CRYPTO.dll 		5.6.2.0
+NETCA_ASN1.dll			1.5.11.0
+
+版本5.5.0
+NETCA_CRYPTO.dll 		5.5.0.0
+NETCA_CRYPTO_UI.dll		1.2.9.0
+NETCA_CRYPTO_UI_RES_1028.DLL	1.2.4.1
+NETCA_CRYPTO_UI_RES_1033.dll	1.2.4.1
+NETCA_CRYPTO_UI_RES_2052.DLL	1.2.4.1
+NetcaJCrypto.dll		5.5.0.1
+NetcaJCrypto.jar		5.5.0.0
+Netca.Pki.dll			5.5.0.0
+
+版本5.3.2
+NETCA_CRYPTO.dll 		5.3.2.0
+NETCA_ASN1.dll			1.5.10.0
+NETCA_UTIL.dll			2.5.3.1
+NetcaJCrypto.dll		5.3.0.0
+NetcaJCrypto.jar		5.3.0.0
+
+版本5.2.0
+NETCA_CRYPTO.dll 		5.2.0.3
+NETCA_ASN1.dll 			1.5.9.0
+NETCA_URL.dll 			1.0.10.0
+NETCA_UTIL.dll 			2.5.2.0
+NetcaSM2CNGProvider.dll		1.6.0.0
+NetcaJCrypto.jar		5.2.0.4
+NetcaJCrypto.dll		5.2.0.2
+
+版本5.1.0
+NETCA_CRYPTO.dll 		5.1.0.0
+NETCA_ASN1.dll			1.5.5.0
+NETCA_UTIL.dll			2.5.1.0
+NetcaJCrypto.dll		2.2.2.0
+NetcaJCrypto.jar		2.2.4.0 2.2.5.0
+
+版本5.0.0
+NETCA_CRYPTO.dll 		5.0.0.0
+NETCA_ASN1.dll			1.5.4.0
+NetcaSM2CNGProvider.dll		1.5.0.0
+NETCA_CRYPTO_UI.dll		1.2.8.4
+NETCA_CRYPTO_UI_RES_1028.DLL	1.2.3.4
+NETCA_CRYPTO_UI_RES_1033.dll	1.2.3.4
+NETCA_CRYPTO_UI_RES_2052.DLL	1.2.3.4
+NetcaFormatObject.dll		1.0.0.5
+NetcaRAClientCom.dll		1.2.0.2
+NetcaJCrypto.dll		2.1.0.0
+NetcaJCrypto.jar		2.1.0.1
+开始存在Android版本
+
+版本2.0.11
+NETCA_CRYPTO.dll 		2.0.11.0
+NETCA_ASN1.dll			1.5.3.0
+NetcaSM2CNGProvider.dll		1.4.0.0
+NetcaIISCNGProvider.dll		1.0.0.1
+NetcaJCrypto.dll		2.0.1.0
+NetcaJCrypto.jar		2.0.1.0
+NetcaIISCNGProvider.dll是新增的
+
+版本2.0.8
+NETCA_CRYPTO.dll 		2.0.8.0
+
+版本2.0.4
+NETCA_CRYPTO.dll 		2.0.4.0
+NETCA_ASN1.dll			1.5.2.0
+NetcaJCrypto.dll		2.0.0.0
+NetcaJCrypto.jar		2.0.0.0
+
+版本2.0.1
+NETCA_CRYPTO.dll		2.0.1.1
+NETCA_ASN1.dll			1.5.1.0
+NETCA_UTIL.dll			2.5.0.3
+NetcaPkiCom.dll			2.0.0.0
+
+版本1.8.3	
+NETCA_CRYPTO.dll		1.8.3.0
+NETCA_CRYPTO_UI.dll		1.2.8.2
+NETCA_CRYPTO_UI_RES_1028.DLL	1.2.3.2
+NETCA_CRYPTO_UI_RES_1033.dll	1.2.3.3
+NETCA_CRYPTO_UI_RES_2052.DLL	1.2.3.3
+NETCA_UTIL.dll			2.4.0.0
+NETCA_ASN1.dll			1.4.0.0
+NetcaJCrypto.dll		1.8.3.0
+NetcaPkiCom.dll			1.8.3.0
+NetcaJCrypto.jar		1.8.3.0
+

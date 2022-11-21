@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignSESeal", "SignSESeal.csproj", "{D2E6FFF7-99FE-4C5C-9FF3-1F2ECB4ED1FD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D2E6FFF7-99FE-4C5C-9FF3-1F2ECB4ED1FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2E6FFF7-99FE-4C5C-9FF3-1F2ECB4ED1FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2E6FFF7-99FE-4C5C-9FF3-1F2ECB4ED1FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2E6FFF7-99FE-4C5C-9FF3-1F2ECB4ED1FD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

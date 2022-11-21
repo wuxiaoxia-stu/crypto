@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report>
+<item xml:id="item1">
+<name>orgname1</name>
+<address>address</address>
+</item>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"/>
+</report>

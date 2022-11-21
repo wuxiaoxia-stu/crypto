@@ -1,0 +1,1 @@
+http://ocsp.cnca.net/ocspconsole/check.do

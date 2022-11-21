@@ -1,0 +1,15 @@
+随机数采集工具，支持0016接口、0018接口，每组采集128KB。
+以文件的形式输出。
+
+
+caijiconfig.ini配置文件说明：
+1、Interface表示接口的规范，值可以填GMT0016或者GMT0018
+2、DsoName表示接口库的名称。
+3、Number表示输出多少组随机数。
+
+
+1、windows平台
+工具是RandomCaijiTool.exe，在RandomCaijiTool.exe同一目录下创建一个data的文件夹。
+
+2、Linux平台（UOS、麒麟等）
+工具是RandCaiJiTool，在RandomCaijiTool.exe同一目录下创建一个data的文件夹。

@@ -1,0 +1,6 @@
+trust目前只配置了ClassA的根证书和中级证书，
+安装时，把文件放在目录C:\Documents and Settings\All Users\Application Data\NETCA\certs中
+在Linux下，放在/etc/.NETCA/certs目录下，32位系统文件名为trust，64位系统文件名为trust64
+
+2013.5.27升级：将ClassC的证书链加入安全环境，包含NETCA Root ClassC.cer、和NETCA Sub-1 ClassC CA.cer。
+

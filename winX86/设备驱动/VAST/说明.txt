@@ -1,0 +1,2 @@
+VDeviceCliLib.dll
+打包到VAST客户端的安装包，放在System32（64位暂时放在SysWOW64中）。

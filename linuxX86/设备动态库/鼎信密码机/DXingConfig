@@ -1,0 +1,5 @@
+DeviceConfigFileName=/etc/.NETCA/mmj_config.ini
+KeyStatusConfigFileName=/etc/.NETCA/DXKeypairStatus.ini
+HasSM3=1
+HasSMS4=1
+HasSM1=1

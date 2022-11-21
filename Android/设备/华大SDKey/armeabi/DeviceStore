@@ -1,0 +1,7 @@
+[HDSDKey]
+class=COM
+sopath=libnetcahdsdkeyprov.so
+type=35
+Server=0
+MultiDevice=0
+signature=poxAkPcHkp3qKHIQ46aAs/JoiJjJjXgbhu0fstxblkv89jnnaQgLXS03HSznpqagIZ7WjvGYptsTDebcxEOPTu0/YYL9nRQW6NMCnbqAI9mSTpYil7VXFl69Rc9SvgtYLqoCl2cM3MuTidM97KZNwgbYGReY7Gb7h30aSct2Uk4=

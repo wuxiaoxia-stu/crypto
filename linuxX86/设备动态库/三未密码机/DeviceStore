@@ -1,0 +1,10 @@
+[SansecDevice]
+class=NETWORK
+sopath=/usr/lib/libsansecprov.so
+type=114
+mustLogin=0
+ECB2CBC=0
+ECB2CTR=1
+Server=1
+signature=Kf2Sc+cQQwg3hjtWh2YEKOhtTvFvbWObveoHEdEEMQIzc6+0aG16OToJPBo/rX95BqYWEsgmhBFLRG8QkjNDmqsCXoF4k4or1OOf5WCA6hIA1rQmspZ+1kuGvMa+ALCf+lBH//OXccBme9v5XV4K9YT/BWgaV2CfdTg04O65ZAY=
+displayName=三未加密机

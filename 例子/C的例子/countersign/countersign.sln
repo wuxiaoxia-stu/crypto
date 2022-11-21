@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "countersign", "countersign.vcproj", "{B33CD860-EE87-4ECC-882D-9DFB3B1C5849}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B33CD860-EE87-4ECC-882D-9DFB3B1C5849}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B33CD860-EE87-4ECC-882D-9DFB3B1C5849}.Debug|Win32.Build.0 = Debug|Win32
+		{B33CD860-EE87-4ECC-882D-9DFB3B1C5849}.Debug|x64.ActiveCfg = Debug|x64
+		{B33CD860-EE87-4ECC-882D-9DFB3B1C5849}.Debug|x64.Build.0 = Debug|x64
+		{B33CD860-EE87-4ECC-882D-9DFB3B1C5849}.Release|Win32.ActiveCfg = Release|Win32
+		{B33CD860-EE87-4ECC-882D-9DFB3B1C5849}.Release|Win32.Build.0 = Release|Win32
+		{B33CD860-EE87-4ECC-882D-9DFB3B1C5849}.Release|x64.ActiveCfg = Release|x64
+		{B33CD860-EE87-4ECC-882D-9DFB3B1C5849}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

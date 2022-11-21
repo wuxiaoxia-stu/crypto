@@ -1,0 +1,751 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D70DF97B217DBD1E0012383D /* NSFileManager+Netca.m in Sources */ = {isa = PBXBuildFile; fileRef = D70DF976217DBD1E0012383D /* NSFileManager+Netca.m */; };
+		D70DF97F217DBFE20012383D /* libz.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D70DF97E217DBFE20012383D /* libz.1.tbd */; };
+		D70DF981217DBFE80012383D /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D70DF980217DBFE80012383D /* libxml2.2.tbd */; };
+		D70DF983217DBFEF0012383D /* libbz2.1.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D70DF982217DBFEF0012383D /* libbz2.1.0.tbd */; };
+		D70DF987217DC18B0012383D /* MultiKey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D70DF986217DC18B0012383D /* MultiKey.framework */; };
+		D70DF989217DC36A0012383D /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D70DF988217DC36A0012383D /* libiconv.tbd */; };
+		D70DF98D217DC38B0012383D /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D70DF98C217DC38B0012383D /* CoreBluetooth.framework */; };
+		D70DF997217DC4070012383D /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D70DF996217DC4060012383D /* libstdc++.tbd */; };
+		D70DF998217DC44D0012383D /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D70DF994217DC3A70012383D /* OpenAL.framework */; };
+		D70DF999217DC4710012383D /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D70DF98A217DC3850012383D /* MediaPlayer.framework */; };
+		D75283A1219D258B003CA1DA /* BluetoothViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D75283A0219D258B003CA1DA /* BluetoothViewController.m */; };
+		D75283A2219D260E003CA1DA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D70DF98E217DC3900012383D /* AudioToolbox.framework */; };
+		D75283A4219D262B003CA1DA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D75283A3219D262B003CA1DA /* CoreGraphics.framework */; };
+		D75B575A217713C70012B468 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D75B5759217713C70012B468 /* AppDelegate.m */; };
+		D75B575D217713C70012B468 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D75B575C217713C70012B468 /* ViewController.m */; };
+		D75B5760217713C70012B468 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D75B575E217713C70012B468 /* Main.storyboard */; };
+		D75B5762217713C70012B468 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D75B5761217713C70012B468 /* Assets.xcassets */; };
+		D75B5765217713C70012B468 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D75B5763217713C70012B468 /* LaunchScreen.storyboard */; };
+		D75B5768217713C70012B468 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D75B5767217713C70012B468 /* main.m */; };
+		D75B5772217713C70012B468 /* NetcaCryptoSDKDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D75B5771217713C70012B468 /* NetcaCryptoSDKDemoTests.m */; };
+		D75B577D217713C70012B468 /* NetcaCryptoSDKDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D75B577C217713C70012B468 /* NetcaCryptoSDKDemoUITests.m */; };
+		D766EEA6219BBE520019E975 /* DemoPDF.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D766EEA5219BBE520019E975 /* DemoPDF.pdf */; };
+		D793C58522321F02003890A8 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D793C58422321F02003890A8 /* libstdc++.6.0.9.tbd */; };
+		D7C6658E219ACD8A001A9E00 /* NetcaResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D7C6658D219ACD89001A9E00 /* NetcaResource.bundle */; };
+		D7C6658F219AD022001A9E00 /* libNetcaCryptoSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C66590219AD022001A9E00 /* libNetcaCryptoSDK.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D75B576E217713C70012B468 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D75B574D217713C70012B468 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D75B5754217713C70012B468;
+			remoteInfo = NetcaCryptoSDKDemo;
+		};
+		D75B5779217713C70012B468 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D75B574D217713C70012B468 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D75B5754217713C70012B468;
+			remoteInfo = NetcaCryptoSDKDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D70DF975217DBD1E0012383D /* NSFileManager+Netca.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Netca.h"; sourceTree = "<group>"; };
+		D70DF976217DBD1E0012383D /* NSFileManager+Netca.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Netca.m"; sourceTree = "<group>"; };
+		D70DF97E217DBFE20012383D /* libz.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.tbd; path = usr/lib/libz.1.tbd; sourceTree = SDKROOT; };
+		D70DF980217DBFE80012383D /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
+		D70DF982217DBFEF0012383D /* libbz2.1.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.1.0.tbd; path = usr/lib/libbz2.1.0.tbd; sourceTree = SDKROOT; };
+		D70DF984217DBFF50012383D /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		D70DF986217DC18B0012383D /* MultiKey.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MultiKey.framework; sourceTree = "<group>"; };
+		D70DF988217DC36A0012383D /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		D70DF98A217DC3850012383D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		D70DF98C217DC38B0012383D /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		D70DF98E217DC3900012383D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		D70DF990217DC39C0012383D /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		D70DF992217DC3A10012383D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		D70DF994217DC3A70012383D /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		D70DF996217DC4060012383D /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		D752839F219D258B003CA1DA /* BluetoothViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothViewController.h; sourceTree = "<group>"; };
+		D75283A0219D258B003CA1DA /* BluetoothViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BluetoothViewController.m; sourceTree = "<group>"; };
+		D75283A3219D262B003CA1DA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D75B5755217713C70012B468 /* NetcaCryptoSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetcaCryptoSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D75B5758217713C70012B468 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D75B5759217713C70012B468 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D75B575B217713C70012B468 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D75B575C217713C70012B468 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D75B575F217713C70012B468 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D75B5761217713C70012B468 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D75B5764217713C70012B468 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D75B5766217713C70012B468 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D75B5767217713C70012B468 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D75B576D217713C70012B468 /* NetcaCryptoSDKDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetcaCryptoSDKDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D75B5771217713C70012B468 /* NetcaCryptoSDKDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetcaCryptoSDKDemoTests.m; sourceTree = "<group>"; };
+		D75B5773217713C70012B468 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D75B5778217713C70012B468 /* NetcaCryptoSDKDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetcaCryptoSDKDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D75B577C217713C70012B468 /* NetcaCryptoSDKDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetcaCryptoSDKDemoUITests.m; sourceTree = "<group>"; };
+		D75B577E217713C70012B468 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D75B57B321771ECF0012B468 /* libNetcaCryptoSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libNetcaCryptoSDK.a; sourceTree = "<group>"; };
+		D764354F218068C2004E3F60 /* NetcaAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetcaAlgorithm.h; sourceTree = "<group>"; };
+		D7643550218068C2004E3F60 /* NetcaBluetoothDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetcaBluetoothDevice.h; sourceTree = "<group>"; };
+		D7643551218068C2004E3F60 /* NetcaBluetoothManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetcaBluetoothManager.h; sourceTree = "<group>"; };
+		D7643552218068C2004E3F60 /* NetcaCertificate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetcaCertificate.h; sourceTree = "<group>"; };
+		D7643553218068C2004E3F60 /* NetcaCertInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetcaCertInterface.h; sourceTree = "<group>"; };
+		D7643554218068C2004E3F60 /* NetcaCipherInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetcaCipherInterface.h; sourceTree = "<group>"; };
+		D7643555218068C2004E3F60 /* NetcaCryptoSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetcaCryptoSDK.h; sourceTree = "<group>"; };
+		D7643556218068C2004E3F60 /* NetcaDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetcaDevice.h; sourceTree = "<group>"; };
+		D7643557218068C2004E3F60 /* NetcaDeviceInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetcaDeviceInterface.h; sourceTree = "<group>"; };
+		D7643558218068C2004E3F60 /* NetcaEnvelopedDataDecryptInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetcaEnvelopedDataDecryptInterface.h; sourceTree = "<group>"; };
+		D7643559218068C2004E3F60 /* NetcaEnvelopedDataEncryptInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetcaEnvelopedDataEncryptInterface.h; sourceTree = "<group>"; };
+		D764355A218068C2004E3F60 /* NetcaError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetcaError.h; sourceTree = "<group>"; };
+		D764355B218068C2004E3F60 /* NetcaHashInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetcaHashInterface.h; sourceTree = "<group>"; };
+		D764355C218068C2004E3F60 /* NetcaPDFArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetcaPDFArea.h; sourceTree = "<group>"; };
+		D764355D218068C2004E3F60 /* NetcaPDFSignInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetcaPDFSignInterface.h; sourceTree = "<group>"; };
+		D764355F218068C2004E3F60 /* NetcaQrCodeSignInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetcaQrCodeSignInterface.h; sourceTree = "<group>"; };
+		D7643560218068C2004E3F60 /* NetcaRevokeInfoUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetcaRevokeInfoUtil.h; sourceTree = "<group>"; };
+		D7643561218068C2004E3F60 /* NetcaSelfServiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetcaSelfServiceViewController.h; sourceTree = "<group>"; };
+		D7643562218068C2004E3F60 /* NetcaSignatureInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetcaSignatureInterface.h; sourceTree = "<group>"; };
+		D7643563218068C2004E3F60 /* NetcaSignatureVerifyInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetcaSignatureVerifyInterface.h; sourceTree = "<group>"; };
+		D7643564218068C2004E3F60 /* NetcaSignedDataSignInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetcaSignedDataSignInterface.h; sourceTree = "<group>"; };
+		D7643565218068C2004E3F60 /* NetcaSignedDataVerifyInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetcaSignedDataVerifyInterface.h; sourceTree = "<group>"; };
+		D7643566218068C2004E3F60 /* NetcaType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetcaType.h; sourceTree = "<group>"; };
+		D766EEA5219BBE520019E975 /* DemoPDF.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = DemoPDF.pdf; sourceTree = "<group>"; };
+		D793C58422321F02003890A8 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.text-based-dylib-definition"; path = "libstdc++.6.0.9.tbd"; sourceTree = "<group>"; };
+		D7C6658A219AC7E6001A9E00 /* NetcaDecryptInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetcaDecryptInterface.h; sourceTree = "<group>"; };
+		D7C6658B219AC7E6001A9E00 /* NetcaEncryptInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetcaEncryptInterface.h; sourceTree = "<group>"; };
+		D7C6658C219AC7E6001A9E00 /* NetcaQRCodeScannerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetcaQRCodeScannerController.h; sourceTree = "<group>"; };
+		D7C6658D219ACD89001A9E00 /* NetcaResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NetcaResource.bundle; sourceTree = "<group>"; };
+		D7C66590219AD022001A9E00 /* libNetcaCryptoSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libNetcaCryptoSDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D75B5752217713C70012B468 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D75283A2219D260E003CA1DA /* AudioToolbox.framework in Frameworks */,
+				D70DF998217DC44D0012383D /* OpenAL.framework in Frameworks */,
+				D75283A4219D262B003CA1DA /* CoreGraphics.framework in Frameworks */,
+				D70DF98D217DC38B0012383D /* CoreBluetooth.framework in Frameworks */,
+				D70DF999217DC4710012383D /* MediaPlayer.framework in Frameworks */,
+				D70DF987217DC18B0012383D /* MultiKey.framework in Frameworks */,
+				D7C6658F219AD022001A9E00 /* libNetcaCryptoSDK.a in Frameworks */,
+				D70DF997217DC4070012383D /* libstdc++.tbd in Frameworks */,
+				D70DF989217DC36A0012383D /* libiconv.tbd in Frameworks */,
+				D793C58522321F02003890A8 /* libstdc++.6.0.9.tbd in Frameworks */,
+				D70DF983217DBFEF0012383D /* libbz2.1.0.tbd in Frameworks */,
+				D70DF981217DBFE80012383D /* libxml2.2.tbd in Frameworks */,
+				D70DF97F217DBFE20012383D /* libz.1.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D75B576A217713C70012B468 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D75B5775217713C70012B468 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D70DF970217DBD1E0012383D /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				D70DF975217DBD1E0012383D /* NSFileManager+Netca.h */,
+				D70DF976217DBD1E0012383D /* NSFileManager+Netca.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		D70DF97D217DBFE20012383D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D75283A3219D262B003CA1DA /* CoreGraphics.framework */,
+				D7C66590219AD022001A9E00 /* libNetcaCryptoSDK.a */,
+				D70DF996217DC4060012383D /* libstdc++.tbd */,
+				D70DF994217DC3A70012383D /* OpenAL.framework */,
+				D70DF992217DC3A10012383D /* Security.framework */,
+				D70DF990217DC39C0012383D /* ExternalAccessory.framework */,
+				D70DF98E217DC3900012383D /* AudioToolbox.framework */,
+				D70DF98C217DC38B0012383D /* CoreBluetooth.framework */,
+				D70DF98A217DC3850012383D /* MediaPlayer.framework */,
+				D70DF988217DC36A0012383D /* libiconv.tbd */,
+				D70DF984217DBFF50012383D /* libstdc++.6.0.9.tbd */,
+				D70DF982217DBFEF0012383D /* libbz2.1.0.tbd */,
+				D70DF980217DBFE80012383D /* libxml2.2.tbd */,
+				D70DF97E217DBFE20012383D /* libz.1.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D75B574C217713C70012B468 = {
+			isa = PBXGroup;
+			children = (
+				D75B5757217713C70012B468 /* NetcaCryptoSDKDemo */,
+				D75B5770217713C70012B468 /* NetcaCryptoSDKDemoTests */,
+				D75B577B217713C70012B468 /* NetcaCryptoSDKDemoUITests */,
+				D75B5756217713C70012B468 /* Products */,
+				D70DF97D217DBFE20012383D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D75B5756217713C70012B468 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D75B5755217713C70012B468 /* NetcaCryptoSDKDemo.app */,
+				D75B576D217713C70012B468 /* NetcaCryptoSDKDemoTests.xctest */,
+				D75B5778217713C70012B468 /* NetcaCryptoSDKDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D75B5757217713C70012B468 /* NetcaCryptoSDKDemo */ = {
+			isa = PBXGroup;
+			children = (
+				D75B579E21771ECF0012B468 /* NetcaCryptoSDK */,
+				D70DF970217DBD1E0012383D /* Category */,
+				D766EEA4219BBE520019E975 /* Resources */,
+				D75B5758217713C70012B468 /* AppDelegate.h */,
+				D75B5759217713C70012B468 /* AppDelegate.m */,
+				D75B575B217713C70012B468 /* ViewController.h */,
+				D75B575C217713C70012B468 /* ViewController.m */,
+				D752839F219D258B003CA1DA /* BluetoothViewController.h */,
+				D75283A0219D258B003CA1DA /* BluetoothViewController.m */,
+				D75B575E217713C70012B468 /* Main.storyboard */,
+				D75B5761217713C70012B468 /* Assets.xcassets */,
+				D75B5763217713C70012B468 /* LaunchScreen.storyboard */,
+				D75B5766217713C70012B468 /* Info.plist */,
+				D75B5767217713C70012B468 /* main.m */,
+			);
+			path = NetcaCryptoSDKDemo;
+			sourceTree = "<group>";
+		};
+		D75B5770217713C70012B468 /* NetcaCryptoSDKDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				D75B5771217713C70012B468 /* NetcaCryptoSDKDemoTests.m */,
+				D75B5773217713C70012B468 /* Info.plist */,
+			);
+			path = NetcaCryptoSDKDemoTests;
+			sourceTree = "<group>";
+		};
+		D75B577B217713C70012B468 /* NetcaCryptoSDKDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D75B577C217713C70012B468 /* NetcaCryptoSDKDemoUITests.m */,
+				D75B577E217713C70012B468 /* Info.plist */,
+			);
+			path = NetcaCryptoSDKDemoUITests;
+			sourceTree = "<group>";
+		};
+		D75B579E21771ECF0012B468 /* NetcaCryptoSDK */ = {
+			isa = PBXGroup;
+			children = (
+				D793C58422321F02003890A8 /* libstdc++.6.0.9.tbd */,
+				D7C6658D219ACD89001A9E00 /* NetcaResource.bundle */,
+				D764354E218068C2004E3F60 /* include */,
+				D70DF986217DC18B0012383D /* MultiKey.framework */,
+				D75B57B321771ECF0012B468 /* libNetcaCryptoSDK.a */,
+			);
+			path = NetcaCryptoSDK;
+			sourceTree = "<group>";
+		};
+		D764354E218068C2004E3F60 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				D7C6658A219AC7E6001A9E00 /* NetcaDecryptInterface.h */,
+				D7C6658B219AC7E6001A9E00 /* NetcaEncryptInterface.h */,
+				D7C6658C219AC7E6001A9E00 /* NetcaQRCodeScannerController.h */,
+				D764354F218068C2004E3F60 /* NetcaAlgorithm.h */,
+				D7643550218068C2004E3F60 /* NetcaBluetoothDevice.h */,
+				D7643551218068C2004E3F60 /* NetcaBluetoothManager.h */,
+				D7643552218068C2004E3F60 /* NetcaCertificate.h */,
+				D7643553218068C2004E3F60 /* NetcaCertInterface.h */,
+				D7643554218068C2004E3F60 /* NetcaCipherInterface.h */,
+				D7643555218068C2004E3F60 /* NetcaCryptoSDK.h */,
+				D7643556218068C2004E3F60 /* NetcaDevice.h */,
+				D7643557218068C2004E3F60 /* NetcaDeviceInterface.h */,
+				D7643558218068C2004E3F60 /* NetcaEnvelopedDataDecryptInterface.h */,
+				D7643559218068C2004E3F60 /* NetcaEnvelopedDataEncryptInterface.h */,
+				D764355A218068C2004E3F60 /* NetcaError.h */,
+				D764355B218068C2004E3F60 /* NetcaHashInterface.h */,
+				D764355C218068C2004E3F60 /* NetcaPDFArea.h */,
+				D764355D218068C2004E3F60 /* NetcaPDFSignInterface.h */,
+				D764355F218068C2004E3F60 /* NetcaQrCodeSignInterface.h */,
+				D7643560218068C2004E3F60 /* NetcaRevokeInfoUtil.h */,
+				D7643561218068C2004E3F60 /* NetcaSelfServiceViewController.h */,
+				D7643562218068C2004E3F60 /* NetcaSignatureInterface.h */,
+				D7643563218068C2004E3F60 /* NetcaSignatureVerifyInterface.h */,
+				D7643564218068C2004E3F60 /* NetcaSignedDataSignInterface.h */,
+				D7643565218068C2004E3F60 /* NetcaSignedDataVerifyInterface.h */,
+				D7643566218068C2004E3F60 /* NetcaType.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		D766EEA4219BBE520019E975 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D766EEA5219BBE520019E975 /* DemoPDF.pdf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D75B5754217713C70012B468 /* NetcaCryptoSDKDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D75B5781217713C70012B468 /* Build configuration list for PBXNativeTarget "NetcaCryptoSDKDemo" */;
+			buildPhases = (
+				D75B5751217713C70012B468 /* Sources */,
+				D75B5752217713C70012B468 /* Frameworks */,
+				D75B5753217713C70012B468 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NetcaCryptoSDKDemo;
+			productName = NetcaCryptoSDKDemo;
+			productReference = D75B5755217713C70012B468 /* NetcaCryptoSDKDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D75B576C217713C70012B468 /* NetcaCryptoSDKDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D75B5784217713C70012B468 /* Build configuration list for PBXNativeTarget "NetcaCryptoSDKDemoTests" */;
+			buildPhases = (
+				D75B5769217713C70012B468 /* Sources */,
+				D75B576A217713C70012B468 /* Frameworks */,
+				D75B576B217713C70012B468 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D75B576F217713C70012B468 /* PBXTargetDependency */,
+			);
+			name = NetcaCryptoSDKDemoTests;
+			productName = NetcaCryptoSDKDemoTests;
+			productReference = D75B576D217713C70012B468 /* NetcaCryptoSDKDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D75B5777217713C70012B468 /* NetcaCryptoSDKDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D75B5787217713C70012B468 /* Build configuration list for PBXNativeTarget "NetcaCryptoSDKDemoUITests" */;
+			buildPhases = (
+				D75B5774217713C70012B468 /* Sources */,
+				D75B5775217713C70012B468 /* Frameworks */,
+				D75B5776217713C70012B468 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D75B577A217713C70012B468 /* PBXTargetDependency */,
+			);
+			name = NetcaCryptoSDKDemoUITests;
+			productName = NetcaCryptoSDKDemoUITests;
+			productReference = D75B5778217713C70012B468 /* NetcaCryptoSDKDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D75B574D217713C70012B468 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = NetcaDeveloper;
+				TargetAttributes = {
+					D75B5754217713C70012B468 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					D75B576C217713C70012B468 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D75B5754217713C70012B468;
+					};
+					D75B5777217713C70012B468 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D75B5754217713C70012B468;
+					};
+				};
+			};
+			buildConfigurationList = D75B5750217713C70012B468 /* Build configuration list for PBXProject "NetcaCryptoSDKDemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D75B574C217713C70012B468;
+			productRefGroup = D75B5756217713C70012B468 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D75B5754217713C70012B468 /* NetcaCryptoSDKDemo */,
+				D75B576C217713C70012B468 /* NetcaCryptoSDKDemoTests */,
+				D75B5777217713C70012B468 /* NetcaCryptoSDKDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D75B5753217713C70012B468 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D766EEA6219BBE520019E975 /* DemoPDF.pdf in Resources */,
+				D75B5765217713C70012B468 /* LaunchScreen.storyboard in Resources */,
+				D75B5762217713C70012B468 /* Assets.xcassets in Resources */,
+				D75B5760217713C70012B468 /* Main.storyboard in Resources */,
+				D7C6658E219ACD8A001A9E00 /* NetcaResource.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D75B576B217713C70012B468 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D75B5776217713C70012B468 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D75B5751217713C70012B468 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D70DF97B217DBD1E0012383D /* NSFileManager+Netca.m in Sources */,
+				D75283A1219D258B003CA1DA /* BluetoothViewController.m in Sources */,
+				D75B575D217713C70012B468 /* ViewController.m in Sources */,
+				D75B5768217713C70012B468 /* main.m in Sources */,
+				D75B575A217713C70012B468 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D75B5769217713C70012B468 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D75B5772217713C70012B468 /* NetcaCryptoSDKDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D75B5774217713C70012B468 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D75B577D217713C70012B468 /* NetcaCryptoSDKDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D75B576F217713C70012B468 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D75B5754217713C70012B468 /* NetcaCryptoSDKDemo */;
+			targetProxy = D75B576E217713C70012B468 /* PBXContainerItemProxy */;
+		};
+		D75B577A217713C70012B468 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D75B5754217713C70012B468 /* NetcaCryptoSDKDemo */;
+			targetProxy = D75B5779217713C70012B468 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D75B575E217713C70012B468 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D75B575F217713C70012B468 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D75B5763217713C70012B468 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D75B5764217713C70012B468 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D75B577F217713C70012B468 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D75B5780217713C70012B468 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D75B5782217713C70012B468 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JJ6VJVV928;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/NetcaCryptoSDKDemo/NetcaCryptoSDK",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/NetcaCryptoSDKDemo/NetcaCryptoSDK";
+				INFOPLIST_FILE = NetcaCryptoSDKDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/NetcaCryptoSDKDemo/NetcaCryptoSDK",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = NetcaDeveloper.NetcaCryptoSDKDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D75B5783217713C70012B468 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JJ6VJVV928;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/NetcaCryptoSDKDemo/NetcaCryptoSDK",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/NetcaCryptoSDKDemo/NetcaCryptoSDK";
+				INFOPLIST_FILE = NetcaCryptoSDKDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/NetcaCryptoSDKDemo/NetcaCryptoSDK",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = NetcaDeveloper.NetcaCryptoSDKDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D75B5785217713C70012B468 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NetcaCryptoSDKDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = NetcaDeveloper.NetcaCryptoSDKDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NetcaCryptoSDKDemo.app/NetcaCryptoSDKDemo";
+			};
+			name = Debug;
+		};
+		D75B5786217713C70012B468 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NetcaCryptoSDKDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = NetcaDeveloper.NetcaCryptoSDKDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NetcaCryptoSDKDemo.app/NetcaCryptoSDKDemo";
+			};
+			name = Release;
+		};
+		D75B5788217713C70012B468 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NetcaCryptoSDKDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = NetcaDeveloper.NetcaCryptoSDKDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NetcaCryptoSDKDemo;
+			};
+			name = Debug;
+		};
+		D75B5789217713C70012B468 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NetcaCryptoSDKDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = NetcaDeveloper.NetcaCryptoSDKDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NetcaCryptoSDKDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D75B5750217713C70012B468 /* Build configuration list for PBXProject "NetcaCryptoSDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D75B577F217713C70012B468 /* Debug */,
+				D75B5780217713C70012B468 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D75B5781217713C70012B468 /* Build configuration list for PBXNativeTarget "NetcaCryptoSDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D75B5782217713C70012B468 /* Debug */,
+				D75B5783217713C70012B468 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D75B5784217713C70012B468 /* Build configuration list for PBXNativeTarget "NetcaCryptoSDKDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D75B5785217713C70012B468 /* Debug */,
+				D75B5786217713C70012B468 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D75B5787217713C70012B468 /* Build configuration list for PBXNativeTarget "NetcaCryptoSDKDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D75B5788217713C70012B468 /* Debug */,
+				D75B5789217713C70012B468 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D75B574D217713C70012B468 /* Project object */;
+}

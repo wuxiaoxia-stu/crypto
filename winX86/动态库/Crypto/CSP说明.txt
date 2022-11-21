@@ -1,0 +1,9 @@
+NETCA_CRYPTO_RSACSP_IMP.dll　版本1.1.2.0
+
+支持2个CSP名称，分别是
+NETCA CRYPTO RSA Cryptographic Provider for GZIC
+NETCA CRYPTO RSA Cryptographic Provider
+
+
+1、NETCA CRYPTO RSA Cryptographic Provider for GZIC是为信息办定制的，只支持SHA-1，不支持SHA-256、SHA-384、SHA-512。
+2、NETCA CRYPTO RSA Cryptographic Provider没有做任何特别的限制，是通用的名称。

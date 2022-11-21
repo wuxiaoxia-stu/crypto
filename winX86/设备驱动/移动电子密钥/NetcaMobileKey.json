@@ -1,0 +1,32 @@
+{
+    "Global": {
+        "UseCache": true,
+        "AutoShow": true,
+        "AllowChangeAutoShow": true,
+        "CacheTimeOut": -1,
+        "GetAllDevicesTimeOut": 8,
+        "ReadCertTimeOut": 10,
+        "SignTimeOut": 60,
+        "DecryptTimeOut": 60,
+        "GetPwdRetryNumberTimeOut": 4,
+        "CreateDataTimeOut": 60,
+        "ReadDataTimeOut": 10,
+        "WriteDataTimeOut": 60,
+        "DeleteDataTimeOut": 60,
+        "GetDataLengthTimeOut": 4,
+        "VerifyPwdTimeOut": 4,
+        "ChangePwdTimeOut": 4,
+        "UnlockUserPwdTimeOut": 4
+    },
+    "MQTT": {
+        "DisplayAddress": "124.71.15.76:1883",
+        "ServiceAddress": "124.71.15.76:1883",
+        "UserName": "mqtt_netca_user",
+        "Password": "BOVPsBbyeWokGzU",
+        "UseSSL": true,
+        "Topic": "mk"
+    },
+    "Log": {
+        "Level": 3
+    }
+}

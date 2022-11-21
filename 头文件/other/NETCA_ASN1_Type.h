@@ -1,0 +1,1118 @@
+#ifndef NETCA_ASN1_TYPE_INCLUDE_INCLUDE_H
+#define NETCA_ASN1_TYPE_INCLUDE_INCLUDE_H
+
+#include "NETCA_BasicType.h"
+#ifdef __cplusplus
+extern "C"
+	{
+#endif
+
+
+
+struct NETCA_ASN1_Boolean_st;
+typedef struct NETCA_ASN1_Boolean_st *NETCA_ASN1_Boolean_Ptr;
+
+struct NETCA_ASN1_Integer_st;
+typedef struct NETCA_ASN1_Integer_st *NETCA_ASN1_Integer_Ptr;
+
+typedef struct NETCA_ASN1_Integer_st *NETCA_ASN1_Enum_Ptr;
+
+struct NETCA_ASN1_BitString_st;
+typedef struct NETCA_ASN1_BitString_st *NETCA_ASN1_BitString_Ptr;
+
+struct NETCA_ASN1_OctetString_st;
+typedef struct NETCA_ASN1_OctetString_st *NETCA_ASN1_OctetString_Ptr;
+
+typedef struct NETCA_ASN1_OctetString_st *NETCA_ASN1_String_Ptr;
+
+struct NETCA_ASN1_Oid_st;
+typedef struct NETCA_ASN1_Oid_st *NETCA_ASN1_OID_Ptr;
+
+struct NETCA_ASN1_RelativeOid_st;
+typedef struct NETCA_ASN1_RelativeOid_st *NETCA_ASN1_RelativeOid_Ptr;
+
+struct NETCA_ASN1_Any_st;
+typedef struct NETCA_ASN1_Any_st *NETCA_ASN1_Any_Ptr;
+
+struct NETCA_ASN1_Time_st;
+typedef struct NETCA_ASN1_Time_st *NETCA_ASN1_Time_Ptr;
+
+struct NETCA_ASN1_List_st;
+typedef struct NETCA_ASN1_List_st *NETCA_ASN1_List_Ptr;
+
+struct NETCA_X500Context_st;
+typedef struct NETCA_X500Context_st *NETCA_X500Context_Ptr;
+
+struct NETCA_X500DNValuesWithContextItem_st;
+typedef struct NETCA_X500DNValuesWithContextItem_st *NETCA_X500DNValuesWithContextItem_Ptr;
+
+struct NETCA_X500AttrTypeDistVal_st;
+typedef struct NETCA_X500AttrTypeDistVal_st *NETCA_X500AttrTypeDistVal_Ptr;
+
+struct NETCA_X500Name_st;
+typedef struct NETCA_X500Name_st *NETCA_X500Name_Ptr;
+
+struct NETCA_X509AlgorithmIdentifier_st;
+typedef struct NETCA_X509AlgorithmIdentifier_st *NETCA_X509AlgorithmIdentifier_Ptr;
+
+struct NETCA_X509Validity_st;
+typedef struct NETCA_X509Validity_st *NETCA_X509Validity_Ptr;
+
+struct NETCA_X509SubjectPublicKeyInfo_st;
+typedef struct NETCA_X509SubjectPublicKeyInfo_st*  NETCA_X509SubjectPublicKeyInfo_Ptr;
+
+struct NETCA_X509Extension_st;
+typedef struct NETCA_X509Extension_st *NETCA_X509Extension_Ptr;
+
+struct NETCA_X509TBSCertificate_st;
+typedef struct NETCA_X509TBSCertificate_st *NETCA_X509TBSCertificate_Ptr;
+
+struct NETCA_X509PubKeyCertificate_st;
+typedef struct NETCA_X509PubKeyCertificate_st* NETCA_X509PubKeyCertificate_Ptr;
+
+struct NETCA_X509RevokedCertificate_st;
+typedef struct NETCA_X509RevokedCertificate_st *NETCA_X509RevokedCertificate_Ptr;
+
+struct NETCA_X509TBSCertList_st;
+typedef struct NETCA_X509TBSCertList_st* NETCA_X509TBSCertList_Ptr;
+
+struct NETCA_X509CRL_st;
+typedef struct NETCA_X509CRL_st *NETCA_X509CRL_Ptr;
+
+struct NETCA_X500AttrValuesWithContextItem_st;
+typedef struct NETCA_X500AttrValuesWithContextItem_st *NETCA_X500AttrValuesWithContextItem_Ptr;
+
+struct NETCA_X500Attribute_st;
+typedef struct NETCA_X500Attribute_st *NETCA_X500Attribute_Ptr;
+
+struct NETCA_PKCS10_CertReqInfo_st;
+typedef struct NETCA_PKCS10_CertReqInfo_st *NETCA_PKCS10_CertReqInfo_Ptr;
+typedef const struct NETCA_PKCS10_CertReqInfo_st *NETCA_PKCS10_CertReqInfo_CPtr;
+
+struct NETCA_PKCS10_CertReq_st;
+typedef struct NETCA_PKCS10_CertReq_st *NETCA_PKCS10_CertReq_Ptr;
+
+struct NETCA_X500DirectoryString_st;
+typedef struct NETCA_X500DirectoryString_st *NETCA_X500DirectoryString_Ptr;
+
+struct NETCA_X500UUIDPair_st;
+typedef struct NETCA_X500UUIDPair_st *NETCA_X500UUIDPair_Ptr;
+
+struct NETCA_X500TelexNumber_st;
+typedef struct NETCA_X500TelexNumber_st *NETCA_X500TelexNumber_Ptr;
+
+struct NETCA_X500NameAndOptionalUID_st;
+typedef struct NETCA_X500NameAndOptionalUID_st *NETCA_X500NameAndOptionalUID_Ptr;
+
+typedef struct NETCA_X500DirectoryString_st *NETCA_PKCS9_String_Ptr;
+
+struct NETCA_X509CertificatePair_st;
+typedef struct NETCA_X509CertificatePair_st *NETCA_X509CertificatePair_Ptr;
+
+struct NETCA_PKCS1_RSAPublicKey_st;
+typedef struct NETCA_PKCS1_RSAPublicKey_st *NETCA_PKCS1_RSAPublicKey_Ptr;
+
+struct NETCA_PKCS_DigestInfo_st;
+typedef struct NETCA_PKCS_DigestInfo_st* NETCA_PKCS_DigestInfo_Ptr;
+
+struct NETCA_DSS_SigValue_st;
+typedef struct NETCA_DSS_SigValue_st* NETCA_DSS_SigValue_Ptr;
+
+struct NETCA_DSS_Parms_st;
+typedef struct NETCA_DSS_Parms_st* NETCA_DSS_Parms_Ptr;
+
+struct NETCA_ASN1_Instanceof_TypeId_st;
+typedef struct NETCA_ASN1_Instanceof_TypeId_st *NETCA_ASN1_Instanceof_TypeId_Ptr;
+
+struct NETCA_X509_EDIPartyName_st;
+typedef struct NETCA_X509_EDIPartyName_st *NETCA_X509_EDIPartyName_Ptr;
+
+#define NETCA_X509_GENERALNAME_TYPE_OTHERNAME		0
+#define NETCA_X509_GENERALNAME_TYPE_RFC822NAME		1
+#define NETCA_X509_GENERALNAME_TYPE_DNSNAME			2
+#define NETCA_X509_GENERALNAME_TYPE_X400ADDRESS		3
+#define NETCA_X509_GENERALNAME_TYPE_DIRNAME			4
+#define NETCA_X509_GENERALNAME_TYPE_EDIPARTYNAME	5
+#define NETCA_X509_GENERALNAME_TYPE_URI				6
+#define NETCA_X509_GENERALNAME_TYPE_IPADDRESS		7
+#define NETCA_X509_GENERALNAME_TYPE_REGID			8
+
+struct NETCA_X509_GeneralName_st;
+typedef struct NETCA_X509_GeneralName_st *NETCA_X509_GeneralName_Ptr;
+
+struct NETCA_X509_AuthorityKeyIdentifier_st;
+typedef struct NETCA_X509_AuthorityKeyIdentifier_st *NETCA_X509_AuthorityKeyIdentifier_Ptr;
+
+struct NETCA_X509_PrivKeyUsagePeriod_st;
+typedef struct NETCA_X509_PrivKeyUsagePeriod_st* NETCA_X509_PrivKeyUsagePeriod_Ptr;
+
+typedef struct NETCA_X509AlgorithmIdentifier_st *NETCA_X509_PolicyQualifierInfo_Ptr;
+
+struct NETCA_X509_PolicyInformation_st;
+typedef struct NETCA_X509_PolicyInformation_st *NETCA_X509_PolicyInformation_Ptr;
+
+typedef struct NETCA_X500DirectoryString_st *NETCA_PKIX_DisplayText_Ptr;
+
+struct NETCA_PKIX_NoticeReference_st;
+typedef struct NETCA_PKIX_NoticeReference_st *NETCA_PKIX_NoticeReference_Ptr;
+
+struct NETCA_PKIX_UserNotice_st;
+typedef struct NETCA_PKIX_UserNotice_st *NETCA_PKIX_UserNotice_Ptr;
+
+struct NETCA_X509_PolicyMapping_st;
+typedef struct NETCA_X509_PolicyMapping_st *NETCA_X509_PolicyMapping_Ptr;
+
+struct NETCA_X509_BasicConstraints_st;
+typedef struct NETCA_X509_BasicConstraints_st *NETCA_X509_BasicConstraints_Ptr;
+
+struct NETCA_X509_GeneralSubtree_st;
+typedef struct NETCA_X509_GeneralSubtree_st *NETCA_X509_GeneralSubtree_Ptr;
+
+struct NETCA_X509_NameForms_st;
+typedef struct NETCA_X509_NameForms_st *NETCA_X509_NameForms_Ptr;
+
+struct NETCA_X509_NameConstraints_st;
+typedef struct NETCA_X509_NameConstraints_st *NETCA_X509_NameConstraints_Ptr;
+
+struct NETCA_X509_PolicyConstraints_st;
+typedef struct NETCA_X509_PolicyConstraints_st *NETCA_X509_PolicyConstraints_Ptr;
+
+#define NETCA_X509_DPNAME_TYPE_FULLNAME				0
+#define NETCA_X509_DPNAME_TYPE_NAMERELTOCRLISSUER	1
+
+struct NETCA_X509_DistributionPointName_st;
+typedef struct NETCA_X509_DistributionPointName_st *NETCA_X509_DistributionPointName_Ptr;
+
+struct NETCA_X509_DistributionPoint_st;
+typedef struct NETCA_X509_DistributionPoint_st *NETCA_X509_DistributionPoint_Ptr;
+
+struct NETCA_PKIX_AccessDescription_st;
+typedef struct NETCA_PKIX_AccessDescription_st *NETCA_PKIX_AccessDescription_Ptr;
+
+struct NETCA_PKIX_IssuingDistributionPoint_st;
+typedef struct NETCA_PKIX_IssuingDistributionPoint_st *NETCA_PKIX_IssuingDistributionPoint_Ptr;
+
+struct NETCA_X509_AAIssuingDistPoint_st;
+typedef struct NETCA_X509_AAIssuingDistPoint_st *NETCA_X509_AAIssuingDistPoint_Ptr;
+
+
+#define NETCA_ASN1_CERTSTORE_KEYID_TYPE_KEYID		0
+#define NETCA_ASN1_CERTSTORE_KEYID_TYPE_PUBLICKEY	1
+
+struct NETCA_ASN1_CertStore_KeyId_st;
+typedef struct NETCA_ASN1_CertStore_KeyId_st *NETCA_ASN1_CertStore_KeyId_Ptr;
+
+struct NETCA_ASN1_CertStore_PrivKeyAttribute_st;
+typedef struct NETCA_ASN1_CertStore_PrivKeyAttribute_st *NETCA_ASN1_CertStore_PrivKeyAttribute_Ptr;
+
+
+#define NETCA_ASN1_CERTSTORE_ATTRIBUTE_TYPE_PRIVKEY	1
+
+struct NETCA_ASN1_CertStore_Attribute_st;
+typedef struct NETCA_ASN1_CertStore_Attribute_st *NETCA_ASN1_CertStore_Attribute_Ptr;
+
+struct NETCA_ASN1_CertStore_CertWithAttribute_st;
+typedef struct NETCA_ASN1_CertStore_CertWithAttribute_st *NETCA_ASN1_CertStore_CertWithAttribute_Ptr;
+
+
+struct NETCA_PKCS1_OtherPrimeInfo_st;
+typedef struct NETCA_PKCS1_OtherPrimeInfo_st *NETCA_PKCS1_OtherPrimeInfo_Ptr;
+
+
+struct NETCA_PKCS1_RSAPrivateKey_st;
+typedef struct NETCA_PKCS1_RSAPrivateKey_st *NETCA_PKCS1_RSAPrivateKey_Ptr;
+
+struct NETCA_PKCS1_RSAES_OAEP_prarams_st;
+typedef struct NETCA_PKCS1_RSAES_OAEP_prarams_st *NETCA_PKCS1_RSAES_OAEP_prarams_Ptr;
+
+struct NETCA_PKCS1_RSASSA_PSS_prarams_st;
+typedef struct NETCA_PKCS1_RSASSA_PSS_prarams_st *NETCA_PKCS1_RSASSA_PSS_prarams_Ptr;
+
+struct NETCA_PKCS3_DHParameter_st;
+typedef struct NETCA_PKCS3_DHParameter_st* NETCA_PKCS3_DHParameter_Ptr;
+
+
+struct NETCA_PKCS8_PrivateKeyInfo_st;
+typedef struct NETCA_PKCS8_PrivateKeyInfo_st* NETCA_PKCS8_PrivateKeyInfo_Ptr;
+
+struct NETCA_PKCS8_EncryptedPrivateKeyInfo_st;
+typedef struct NETCA_PKCS8_EncryptedPrivateKeyInfo_st* NETCA_PKCS8_EncryptedPrivateKeyInfo_Ptr;
+
+struct NETCA_PKCS5_PBKDF2_params_st;
+typedef struct NETCA_PKCS5_PBKDF2_params_st* NETCA_PKCS5_PBKDF2_params_Ptr;
+
+#define NETCA_PKCS5_PBKDF2_PARAMS_SALTTYPE_SPECIFIED	0
+#define NETCA_PKCS5_PBKDF2_PARAMS_SALTTYPE_OTHERSOURCE	1
+struct NETCA_PKCS5_PBKDF2_params_salt_st;
+typedef struct NETCA_PKCS5_PBKDF2_params_salt_st* NETCA_PKCS5_PBKDF2_params_salt_Ptr;
+
+struct NETCA_PKCS5_PBEParameter_st;
+typedef struct NETCA_PKCS5_PBEParameter_st* NETCA_PKCS5_PBEParameter_Ptr;
+
+struct NETCA_PKCS5_PBMAC1_params_st;
+typedef struct NETCA_PKCS5_PBMAC1_params_st* NETCA_PKCS5_PBMAC1_params_Ptr;
+
+struct NETCA_PKCS5_PBES2_params_st;
+typedef struct NETCA_PKCS5_PBES2_params_st* NETCA_PKCS5_PBES2_params_Ptr;
+
+struct NETCA_PKCS5_RC2_CBC_Parameter_st;
+typedef struct NETCA_PKCS5_RC2_CBC_Parameter_st* NETCA_PKCS5_RC2_CBC_Parameter_Ptr;
+
+struct NETCA_PKCS5_RC5_CBC_Parameter_st;
+typedef struct NETCA_PKCS5_RC5_CBC_Parameter_st* NETCA_PKCS5_RC5_CBC_Parameter_Ptr;
+
+struct NETCA_PKCS7_ContentInfo_st;
+typedef struct NETCA_PKCS7_ContentInfo_st* NETCA_PKCS7_ContentInfo_Ptr;
+
+
+struct NETCA_PKCS12_MacData_st;
+typedef struct NETCA_PKCS12_MacData_st* NETCA_PKCS12_MacData_Ptr;
+
+struct NETCA_PKCS12_PFX_st;
+typedef struct NETCA_PKCS12_PFX_st* NETCA_PKCS12_PFX_Ptr;
+
+struct NETCA_PKCS12_SafeBag_st;
+typedef struct NETCA_PKCS12_SafeBag_st* NETCA_PKCS12_SafeBag_Ptr;
+
+struct NETCA_PKCS12_CertBag_st;
+typedef struct NETCA_PKCS12_CertBag_st* NETCA_PKCS12_CertBag_Ptr;
+
+struct NETCA_PKCS12_CRLBag_st;
+typedef struct NETCA_PKCS12_CRLBag_st* NETCA_PKCS12_CRLBag_Ptr;
+
+struct NETCA_PKCS12_SecretBag_st;
+typedef struct NETCA_PKCS12_SecretBag_st* NETCA_PKCS12_SecretBag_Ptr;
+
+struct NETCA_PKCS12_PbeParams_st;
+typedef struct NETCA_PKCS12_PbeParams_st* NETCA_PKCS12_PbeParams_Ptr;
+
+struct NETCA_PKCS7_DigestedData_st;
+typedef struct NETCA_PKCS7_DigestedData_st* NETCA_PKCS7_DigestedData_Ptr;
+
+struct NETCA_CMS_EncapsulatedContentInfo_st;
+typedef struct NETCA_CMS_EncapsulatedContentInfo_st* NETCA_CMS_EncapsulatedContentInfo_Ptr;
+
+struct NETCA_CMS_IssuerAndSerialNumber_st;
+typedef struct NETCA_CMS_IssuerAndSerialNumber_st* NETCA_CMS_IssuerAndSerialNumber_Ptr;
+
+#define NETCA_CMS_SIGNERID_TYPE_ISSUERANDSN	0
+#define NETCA_CMS_SIGNERID_TYPE_SUBJECTKEYID 1
+struct NETCA_CMS_SignerIdentifier_st;
+typedef struct NETCA_CMS_SignerIdentifier_st* NETCA_CMS_SignerIdentifier_Ptr;
+
+struct NETCA_CMS_SignerInfo_st;
+typedef struct NETCA_CMS_SignerInfo_st* NETCA_CMS_SignerInfo_Ptr;
+
+struct NETCA_CMS_OtherCertificateFormat_st;
+typedef struct NETCA_CMS_OtherCertificateFormat_st* NETCA_CMS_OtherCertificateFormat_Ptr;
+
+struct NETCA_CMS_OtherRevocationInfoFormat_st;
+typedef struct NETCA_CMS_OtherRevocationInfoFormat_st* NETCA_CMS_OtherRevocationInfoFormat_Ptr;
+
+#define NETCA_CMS_CERTTYPE_X509PUBKEYCERT	0
+#define NETCA_CMS_CERTTYPE_PKCS6CERT		1
+#define NETCA_CMS_CERTTYPE_V1ATTRCERT		2
+#define NETCA_CMS_CERTTYPE_V2ATTRCERT		3
+#define NETCA_CMS_CERTTYPE_OTHERCERT		4
+struct NETCA_CMS_CertificateChoices_st;
+typedef struct NETCA_CMS_CertificateChoices_st* NETCA_CMS_CertificateChoices_Ptr;
+
+#define NETCA_CMS_CRLTYPE_X509CRL		0
+#define NETCA_CMS_CRLTYPE_OTHERREVINFO	1
+struct NETCA_CMS_RevocationInfoChoice_st;
+typedef struct NETCA_CMS_RevocationInfoChoice_st* NETCA_CMS_RevocationInfoChoice_Ptr;
+
+
+#define NETCA_CMS_SIGNEDDATA_TYPE_CONTENT_INFO			0
+#define NETCA_CMS_SIGNEDDATA_TYPE_NO_CONTENT_INFO		1
+#define NETCA_CMS_SIGNEDDATA_TYPE_SM2_CONTENT_INFO		2
+
+struct NETCA_CMS_SignedData_st;
+typedef struct NETCA_CMS_SignedData_st* NETCA_CMS_SignedData_Ptr;
+
+struct NETCA_CMS_EncryptedContentInfo_st;
+typedef struct NETCA_CMS_EncryptedContentInfo_st *NETCA_CMS_EncryptedContentInfo_Ptr;
+
+struct NETCA_CMS_EncryptedData_st;
+typedef struct NETCA_CMS_EncryptedData_st* NETCA_CMS_EncryptedData_Ptr;
+
+
+struct NETCA_CMS_OriginatorInfo_st;
+typedef struct NETCA_CMS_OriginatorInfo_st* NETCA_CMS_OriginatorInfo_Ptr;
+
+typedef struct NETCA_CMS_SignerIdentifier_st* NETCA_CMS_RecipientIdentifier_Ptr;
+
+struct NETCA_CMS_KeyTransRecipientInfo_st;
+typedef struct NETCA_CMS_KeyTransRecipientInfo_st *NETCA_CMS_KeyTransRecipientInfo_Ptr;
+
+
+#define NETCA_CMS_RECIPIENTID_TYPE_ISSUERANDSN	0
+#define NETCA_CMS_RECIPIENTID_TYPE_SUBJECTKEYID 1
+
+
+#define NETCA_CMS_ORGIDORKEY_TYPE_ISSUERANDSN	0
+#define NETCA_CMS_ORGIDORKEY_TYPE_SUBJECTKEYID	1
+#define NETCA_CMS_ORGIDORKEY_TYPE_ORGKEY			2
+
+
+struct NETCA_CMS_OriginatorIdentifierOrKey_st;
+typedef struct NETCA_CMS_OriginatorIdentifierOrKey_st *NETCA_CMS_OriginatorIdentifierOrKey_Ptr;
+
+
+struct NETCA_CMS_OtherKeyAttribute_st;
+typedef struct NETCA_CMS_OtherKeyAttribute_st* NETCA_CMS_OtherKeyAttribute_Ptr;
+
+
+struct NETCA_CMS_RecipientKeyIdentifier_st;
+typedef struct NETCA_CMS_RecipientKeyIdentifier_st* NETCA_CMS_RecipientKeyIdentifier_Ptr;
+
+#define NETCA_CMS_KEYAGREERECIPIENTID_TYPE_ISSUERANDSN	0
+#define NETCA_CMS_KEYAGREERECIPIENTID_TYPE_KEYID		1
+
+struct NETCA_CMS_KeyAgreeRecipientIdentifier_st;
+typedef struct NETCA_CMS_KeyAgreeRecipientIdentifier_st *NETCA_CMS_KeyAgreeRecipientIdentifier_Ptr;
+
+struct NETCA_CMS_RecipientEncryptedKey_st;
+typedef struct NETCA_CMS_RecipientEncryptedKey_st* NETCA_CMS_RecipientEncryptedKey_Ptr;
+
+struct NETCA_CMS_KeyAgreeRecipientInfo_st;
+typedef struct NETCA_CMS_KeyAgreeRecipientInfo_st* NETCA_CMS_KeyAgreeRecipientInfo_Ptr;
+
+
+typedef struct NETCA_CMS_RecipientKeyIdentifier_st* NETCA_CMS_KEKIdentifier_Ptr;
+
+struct NETCA_CMS_KEKRecipientInfo_st;
+typedef struct NETCA_CMS_KEKRecipientInfo_st* NETCA_CMS_KEKRecipientInfo_Ptr;
+
+
+struct NETCA_CMS_PasswordRecipientInfo_st;
+typedef struct NETCA_CMS_PasswordRecipientInfo_st* NETCA_CMS_PasswordRecipientInfo_Ptr;
+
+struct NETCA_CMS_OtherRecipientInfo_st;
+typedef struct NETCA_CMS_OtherRecipientInfo_st* NETCA_CMS_OtherRecipientInfo_Ptr;
+
+#define NETCA_CMS_RECIPIENTINFO_TYPE_KEYTRANS	0
+#define NETCA_CMS_RECIPIENTINFO_TYPE_KEYAGREE	1
+#define NETCA_CMS_RECIPIENTINFO_TYPE_KEK		2
+#define NETCA_CMS_RECIPIENTINFO_TYPE_PWD		3
+#define NETCA_CMS_RECIPIENTINFO_TYPE_OTHER		4
+
+struct NETCA_CMS_RecipientInfo_st;
+typedef struct NETCA_CMS_RecipientInfo_st* NETCA_CMS_RecipientInfo_Ptr;
+
+struct NETCA_CMS_EnvelopedData_st;
+typedef struct NETCA_CMS_EnvelopedData_st* NETCA_CMS_EnvelopedData_Ptr;
+
+struct NETCA_CMS_AuthenticatedData_st;
+typedef struct NETCA_CMS_AuthenticatedData_st* NETCA_CMS_AuthenticatedData_Ptr;
+
+struct NETCA_DH_KeySpecificInfo_st;
+typedef struct NETCA_DH_KeySpecificInfo_st* NETCA_DH_KeySpecificInfo_Ptr;
+
+struct NETCA_DH_OtherInfo_st;
+typedef struct NETCA_DH_OtherInfo_st* NETCA_DH_OtherInfo_Ptr;
+
+struct NETCA_ASN1_OctetString_Decode_Ctx_st;
+typedef struct NETCA_ASN1_OctetString_Decode_Ctx_st * NETCA_ASN1_OctetString_Decode_Ctx;
+
+struct NETCA_ASN1_ANY_Decode_Ctx_st;
+typedef struct NETCA_ASN1_ANY_Decode_Ctx_st * NETCA_ASN1_ANY_Decode_Ctx;
+
+struct NETCA_ASN1_OCSP_CertID_st;
+typedef struct NETCA_ASN1_OCSP_CertID_st * NETCA_ASN1_OCSP_CertID_Ptr;
+
+struct NETCA_ASN1_OCSP_Request_st;
+typedef struct NETCA_ASN1_OCSP_Request_st * NETCA_ASN1_OCSP_Request_Ptr;
+
+struct NETCA_ASN1_OCSP_TBSRequest_st;
+typedef struct NETCA_ASN1_OCSP_TBSRequest_st* NETCA_ASN1_OCSP_TBSRequest_Ptr;
+
+struct NETCA_ASN1_OCSP_Signature_st;
+typedef struct NETCA_ASN1_OCSP_Signature_st* NETCA_ASN1_OCSP_Signature_Ptr;
+
+
+struct NETCA_ASN1_OCSP_OCSPRequest_st;
+typedef struct NETCA_ASN1_OCSP_OCSPRequest_st* NETCA_ASN1_OCSP_OCSPRequest_Ptr;
+
+
+struct NETCA_ASN1_OCSP_ResponseBytes_st;
+typedef struct NETCA_ASN1_OCSP_ResponseBytes_st* NETCA_ASN1_OCSP_ResponseBytes_Ptr;
+
+
+struct NETCA_ASN1_OCSP_OCSPResponse_st;
+typedef struct NETCA_ASN1_OCSP_OCSPResponse_st* NETCA_ASN1_OCSP_OCSPResponse_Ptr;
+
+
+#define NETCA_OCSP_RESPONDERID_TYPE_BYNAME		1
+#define NETCA_OCSP_RESPONDERID_TYPE_BYKEY		2
+
+struct NETCA_ASN1_OCSP_ResponderID_st;
+typedef struct NETCA_ASN1_OCSP_ResponderID_st* NETCA_ASN1_OCSP_ResponderID_Ptr;
+
+struct NETCA_ASN1_OCSP_RevokedInfo_st;
+typedef struct NETCA_ASN1_OCSP_RevokedInfo_st* NETCA_ASN1_OCSP_RevokedInfo_Ptr;
+
+#define NETCA_OCSP_CERTSTATUS_TYPE_GOOD		0
+#define NETCA_OCSP_CERTSTATUS_TYPE_REVOKED	1
+#define NETCA_OCSP_CERTSTATUS_TYPE_UNKNOWN	2
+
+struct NETCA_ASN1_OCSP_CertStatus_st;
+typedef struct NETCA_ASN1_OCSP_CertStatus_st* NETCA_ASN1_OCSP_CertStatus_Ptr;
+
+
+struct NETCA_ASN1_OCSP_SingleResponse_st;
+typedef struct NETCA_ASN1_OCSP_SingleResponse_st* NETCA_ASN1_OCSP_SingleResponse_Ptr;
+
+
+struct NETCA_ASN1_OCSP_ResponseData_st;
+typedef struct NETCA_ASN1_OCSP_ResponseData_st* NETCA_ASN1_OCSP_ResponseData_Ptr;
+
+
+struct NETCA_ASN1_OCSP_BasicOCSPResponse_st;
+typedef struct NETCA_ASN1_OCSP_BasicOCSPResponse_st* NETCA_ASN1_OCSP_BasicOCSPResponse_Ptr;
+
+struct NETCA_ASN1_OCSP_CrlID_st;
+typedef struct NETCA_ASN1_OCSP_CrlID_st* NETCA_ASN1_OCSP_CrlID_Ptr;
+
+
+struct NETCA_ASN1_OCSP_ServiceLocator_st;
+typedef struct NETCA_ASN1_OCSP_ServiceLocator_st* NETCA_ASN1_OCSP_ServiceLocator_Ptr;
+
+struct NETCA_ASN1_OCSP_PreferredSignatureAlgorithm_st;
+typedef struct NETCA_ASN1_OCSP_PreferredSignatureAlgorithm_st* NETCA_ASN1_OCSP_PreferredSignatureAlgorithm_Ptr;
+
+
+typedef struct NETCA_PKCS_DigestInfo_st* NETCA_ASN1_TSP_MessageImprint_Ptr;
+
+struct NETCA_ASN1_TSP_TimeStampReq_st;
+typedef struct NETCA_ASN1_TSP_TimeStampReq_st* NETCA_ASN1_TSP_TimeStampReq_Ptr;
+
+struct NETCA_ASN1_TSP_PKIStatusInfo_st;
+typedef struct NETCA_ASN1_TSP_PKIStatusInfo_st* NETCA_ASN1_TSP_PKIStatusInfo_Ptr;
+
+struct NETCA_ASN1_TSP_TimeStampResp_st;
+typedef struct NETCA_ASN1_TSP_TimeStampResp_st* NETCA_ASN1_TSP_TimeStampResp_Ptr;
+
+struct NETCA_ASN1_TSP_Accuracy_st;
+typedef struct NETCA_ASN1_TSP_Accuracy_st* NETCA_ASN1_TSP_Accuracy_Ptr;
+
+
+struct NETCA_ASN1_TSP_TSTInfo_st;
+typedef struct NETCA_ASN1_TSP_TSTInfo_st* NETCA_ASN1_TSP_TSTInfo_Ptr;
+
+
+struct NETCA_ASN1_ESSIssuerSerial_st;
+typedef struct NETCA_ASN1_ESSIssuerSerial_st* NETCA_ASN1_ESSIssuerSerial_Ptr;
+
+struct NETCA_ASN1_ESSCertID_st;
+typedef struct NETCA_ASN1_ESSCertID_st* NETCA_ASN1_ESSCertID_Ptr;
+
+struct NETCA_ASN1_ESSCertIDV2_st;
+typedef struct NETCA_ASN1_ESSCertIDV2_st* NETCA_ASN1_ESSCertIDV2_Ptr;
+
+struct NETCA_ASN1_ESSSigningCertificate_st;
+typedef struct NETCA_ASN1_ESSSigningCertificate_st* NETCA_ASN1_ESSSigningCertificate_Ptr;
+
+typedef struct NETCA_ASN1_ESSSigningCertificate_st* NETCA_ASN1_ESSSigningCertificateV2_Ptr;
+
+
+#define NETCA_ECPKPARAMETERS_TYPE_ECPARAMETERS		1
+#define NETCA_ECPKPARAMETERS_TYPE_NAMEDCURVE		2
+#define NETCA_ECPKPARAMETERS_TYPE_IMPLICITLYCA		3
+
+struct NETCA_EcpkParameters_st;
+typedef struct NETCA_EcpkParameters_st *NETCA_EcpkParameters_Ptr;
+
+struct NETCA_ECPrivateKey_st;
+typedef struct NETCA_ECPrivateKey_st *NETCA_ECPrivateKey_Ptr;
+
+
+struct NETCA_SM2Cipher_st;
+typedef struct NETCA_SM2Cipher_st *NETCA_SM2Cipher_Ptr;
+
+
+struct NETCA_SM2EnvelopedKey_st;
+typedef struct NETCA_SM2EnvelopedKey_st *NETCA_SM2EnvelopedKey_Ptr;
+
+
+struct NETCA_RSAEnvelopedKeyPair_st;
+typedef struct NETCA_RSAEnvelopedKeyPair_st *NETCA_RSAEnvelopedKeyPair_Ptr;
+
+struct NETCA_ECCEnvelopedKey_st;
+typedef struct NETCA_ECCEnvelopedKey_st *NETCA_ECCEnvelopedKey_Ptr;
+
+#define NETCA_ENVELOPEDKEYPAIR_TYPE_RSA 1
+#define NETCA_ENVELOPEDKEYPAIR_TYPE_SM2 2
+#define NETCA_ENVELOPEDKEYPAIR_TYPE_ECC 3
+
+struct NETCA_InnerEnvelopedKeyPair_st;
+typedef struct NETCA_InnerEnvelopedKeyPair_st *NETCA_InnerEnvelopedKeyPair_Ptr;
+
+
+struct NETCA_EnvelopedKeyPair_st;
+typedef struct NETCA_EnvelopedKeyPair_st *NETCA_EnvelopedKeyPair_Ptr;
+
+struct NETCA_ASN1_SpcIndirectDataContent_st;
+typedef struct NETCA_ASN1_SpcIndirectDataContent_st* NETCA_ASN1_SpcIndirectDataContent_Ptr;
+
+struct NETCA_ASN1_SpcAttributeTypeAndOptionalValue_st;
+typedef struct NETCA_ASN1_SpcAttributeTypeAndOptionalValue_st* NETCA_ASN1_SpcAttributeTypeAndOptionalValue_Ptr;
+
+
+struct NETCA_ASN1_SpcSerializedObject_st;
+typedef struct NETCA_ASN1_SpcSerializedObject_st* NETCA_ASN1_SpcSerializedObject_Ptr;
+
+#define NETCA_ASN1_SPCSTRING_TYPE_BMPSTRING		0
+#define NETCA_ASN1_SPCSTRING_TYPE_IA5STRING		1
+struct NETCA_ASN1_SpcString_st;
+typedef struct NETCA_ASN1_SpcString_st* NETCA_ASN1_SpcString_Ptr;
+
+#define NETCA_ASN1_SPCLINK_TYPE_URL				0
+#define NETCA_ASN1_SPCLINK_TYPE_MONIKER			1
+#define NETCA_ASN1_SPCLINK_TYPE_FILE			2
+
+struct NETCA_ASN1_SpcLink_st;
+typedef struct NETCA_ASN1_SpcLink_st* NETCA_ASN1_SpcLink_Ptr;
+
+
+struct NETCA_ASN1_SpcPeImageData_st;
+typedef struct NETCA_ASN1_SpcPeImageData_st* NETCA_ASN1_SpcPeImageData_Ptr;
+
+
+struct NETCA_ASN1_SpcSpOpusInfo_st;
+typedef struct NETCA_ASN1_SpcSpOpusInfo_st* NETCA_ASN1_SpcSpOpusInfo_Ptr;
+
+struct NETCA_ASN1_Authenticode_TimestampReq_st;
+typedef struct NETCA_ASN1_Authenticode_TimestampReq_st* NETCA_ASN1_Authenticode_TimestampReq_Ptr;
+
+#define NETCA_ASN1_SMIME_ENCRYPTION_KEY_PREFERENCE_TYPE_ISSUER_AND_SERIALNUMBER		0
+#define NETCA_ASN1_SMIME_ENCRYPTION_KEY_PREFERENCE_TYPE_RECIPIENT_KEY_IDENTIFIER	1
+#define NETCA_ASN1_SMIME_ENCRYPTION_KEY_PREFERENCE_TYPE_SUBJECT_KEY_IDENTIFIER		2
+
+struct NETCA_ASN1_SMIMEEncryptionKeyPreference_st;
+typedef struct NETCA_ASN1_SMIMEEncryptionKeyPreference_st* NETCA_ASN1_SMIMEEncryptionKeyPreference_Ptr;
+
+#define NETCA_ASN1_IDENTITYCODE_TYPE_RESIDENTERCARDNUMBER				0
+#define NETCA_ASN1_IDENTITYCODE_TYPE_MILITARYOFFICERCARDNUMBER			1
+#define NETCA_ASN1_IDENTITYCODE_TYPE_PASSPORTNUMBER						2
+
+struct NETCA_ASN1_IdentityCode_st;
+typedef struct NETCA_ASN1_IdentityCode_st* NETCA_ASN1_IdentityCode_Ptr;
+
+struct NETCA_ASN1_DhSigStatic_st;
+typedef struct NETCA_ASN1_DhSigStatic_st* NETCA_ASN1_DhSigStatic_Ptr;
+
+#define NETCA_ASN1_BIOMETRICDATA_TYPE_PREDEFINED	1
+#define NETCA_ASN1_BIOMETRICDATA_TYPE_OID			2
+
+struct NETCA_ASN1_TypeOfBiometricData_st;
+typedef struct NETCA_ASN1_TypeOfBiometricData_st* NETCA_ASN1_TypeOfBiometricData_Ptr;
+
+struct NETCA_ASN1_BiometricData_st;
+typedef struct NETCA_ASN1_BiometricData_st* NETCA_ASN1_BiometricData_Ptr;
+
+struct NETCA_ASN1_SemanticsInformation_st;
+typedef struct NETCA_ASN1_SemanticsInformation_st* NETCA_ASN1_SemanticsInformation_Ptr;
+
+#define NETCA_ASN1_OTHERHASH_TYPE_SHA1	1
+#define NETCA_ASN1_OTHERHASH_TYPE_OTHER	2
+
+struct NETCA_ASN1_OtherHash_st;
+typedef struct NETCA_ASN1_OtherHash_st* NETCA_ASN1_OtherHash_Ptr;
+
+struct NETCA_ASN1_OtherCertID_st;
+typedef struct NETCA_ASN1_OtherCertID_st* NETCA_ASN1_OtherCertID_Ptr;
+
+
+struct NETCA_ASN1_OtherSigningCertificate_st;
+typedef struct NETCA_ASN1_OtherSigningCertificate_st* NETCA_ASN1_OtherSigningCertificate_Ptr;
+
+#define NETCA_ASN1_SIGNATUREPOLICYID_TYPE_ID		1
+#define NETCA_ASN1_SIGNATUREPOLICYID_TYPE_IMPLIED	2
+
+struct NETCA_ASN1_SignaturePolicyIdentifier_st;
+typedef struct NETCA_ASN1_SignaturePolicyIdentifier_st* NETCA_ASN1_SignaturePolicyIdentifier_Ptr;
+
+struct NETCA_ASN1_SignaturePolicyId_st;
+typedef struct NETCA_ASN1_SignaturePolicyId_st* NETCA_ASN1_SignaturePolicyId_Ptr;
+
+struct NETCA_ASN1_CommitmentTypeIndication_st;
+typedef struct NETCA_ASN1_CommitmentTypeIndication_st* NETCA_ASN1_CommitmentTypeIndication_Ptr;
+
+
+struct NETCA_ASN1_SignerLocation_st;
+typedef struct NETCA_ASN1_SignerLocation_st* NETCA_ASN1_SignerLocation_Ptr;
+
+struct NETCA_ASN1_CrlIdentifier_st;
+typedef struct NETCA_ASN1_CrlIdentifier_st* NETCA_ASN1_CrlIdentifier_Ptr;
+
+struct NETCA_ASN1_CrlValidatedID_st;
+typedef struct NETCA_ASN1_CrlValidatedID_st* NETCA_ASN1_CrlValidatedID_Ptr;
+
+struct NETCA_ASN1_CRLListID_st;
+typedef struct NETCA_ASN1_CRLListID_st* NETCA_ASN1_CRLListID_Ptr;
+
+
+struct NETCA_ASN1_OcspIdentifier_st;
+typedef struct NETCA_ASN1_OcspIdentifier_st* NETCA_ASN1_OcspIdentifier_Ptr;
+
+struct NETCA_ASN1_OcspResponsesID_st;
+typedef struct NETCA_ASN1_OcspResponsesID_st* NETCA_ASN1_OcspResponsesID_Ptr;
+
+
+struct NETCA_ASN1_OcspListID_st;
+typedef struct NETCA_ASN1_OcspListID_st* NETCA_ASN1_OcspListID_Ptr;
+
+struct NETCA_ASN1_OtherRevRefs_st;
+typedef struct NETCA_ASN1_OtherRevRefs_st* NETCA_ASN1_OtherRevRefs_Ptr;
+
+struct NETCA_ASN1_CrlOcspRef_st;
+typedef struct NETCA_ASN1_CrlOcspRef_st* NETCA_ASN1_CrlOcspRef_Ptr;
+
+struct NETCA_ASN1_OtherRevVals_st;
+typedef struct NETCA_ASN1_OtherRevVals_st* NETCA_ASN1_OtherRevVals_Ptr;
+
+struct NETCA_ASN1_RevocationValues_st;
+typedef struct NETCA_ASN1_RevocationValues_st* NETCA_ASN1_RevocationValues_Ptr;
+
+
+struct NETCA_ASN1_ATSHashIndex_st;
+typedef struct NETCA_ASN1_ATSHashIndex_st* NETCA_ASN1_ATSHashIndex_Ptr;
+
+struct NETCA_ASN1_ObjectDigestInfo_st;
+typedef struct NETCA_ASN1_ObjectDigestInfo_st* NETCA_ASN1_ObjectDigestInfo_Ptr;
+
+struct NETCA_ASN1_ACIssuerSerial_st;
+typedef struct NETCA_ASN1_ACIssuerSerial_st* NETCA_ASN1_ACIssuerSerial_Ptr;
+
+struct NETCA_ASN1_Holder_st;
+typedef struct NETCA_ASN1_Holder_st* NETCA_ASN1_Holder_Ptr;
+
+
+struct NETCA_ASN1_AC_V2Form_st;
+typedef struct NETCA_ASN1_AC_V2Form_st* NETCA_ASN1_AC_V2Form_Ptr;
+
+#define NETCA_ASN1_ATTCERTISSUER_TYPE_V1	1
+#define NETCA_ASN1_ATTCERTISSUER_TYPE_V2	2
+
+struct NETCA_ASN1_AttCertIssuer_st;
+typedef struct NETCA_ASN1_AttCertIssuer_st* NETCA_ASN1_AttCertIssuer_Ptr;
+
+
+struct NETCA_ASN1_AttCertValidityPeriod_st;
+typedef struct NETCA_ASN1_AttCertValidityPeriod_st* NETCA_ASN1_AttCertValidityPeriod_Ptr;
+
+struct NETCA_ASN1_AttributeCertificateInfo_st;
+typedef struct NETCA_ASN1_AttributeCertificateInfo_st* NETCA_ASN1_AttributeCertificateInfo_Ptr;
+
+struct NETCA_ASN1_AttributeCertificate_st;
+typedef struct NETCA_ASN1_AttributeCertificate_st* NETCA_ASN1_AttributeCertificate_Ptr;
+
+#define NETCA_ASN1_SIGNERATTRIBUTE_ITEM_TYPE_ATTR	0
+#define NETCA_ASN1_SIGNERATTRIBUTE_ITEM_TYPE_AC		1
+
+struct NETCA_ASN1_SignerAttributeItem_st;
+typedef struct NETCA_ASN1_SignerAttributeItem_st* NETCA_ASN1_SignerAttributeItem_Ptr;
+
+struct NETCA_ASN1_SignerAttribute_st;
+typedef struct NETCA_ASN1_SignerAttribute_st* NETCA_ASN1_SignerAttribute_Ptr;
+
+struct NETCA_ASN1_ContentReference_st;
+typedef struct NETCA_ASN1_ContentReference_st* NETCA_ASN1_ContentReference_Ptr;
+
+struct NETCA_ASN1_ContentHints_st;
+typedef struct NETCA_ASN1_ContentHints_st* NETCA_ASN1_ContentHints_Ptr;
+
+struct NETCA_ASN1_ERS_EncryptionInfo_st;
+typedef struct NETCA_ASN1_ERS_EncryptionInfo_st* NETCA_ASN1_ERS_EncryptionInfo_Ptr;
+
+
+struct NETCA_ASN1_ERS_ArchiveTimeStamp_st;
+typedef struct NETCA_ASN1_ERS_ArchiveTimeStamp_st* NETCA_ASN1_ERS_ArchiveTimeStamp_Ptr;
+
+
+struct NETCA_ASN1_ERS_EvidenceRecord_st;
+typedef struct NETCA_ASN1_ERS_EvidenceRecord_st* NETCA_ASN1_ERS_EvidenceRecord_Ptr;
+
+#define NETCA_ASN1_POEVALUE_TYPE_TIMESTAMP	0
+#define NETCA_ASN1_POEVALUE_TYPE_ER			1
+
+struct NETCA_ASN1_PoeValue_st;
+typedef struct NETCA_ASN1_PoeValue_st* NETCA_ASN1_PoeValue_Ptr;
+
+
+struct NETCA_ASN1_LongTermValidation_st;
+typedef struct NETCA_ASN1_LongTermValidation_st* NETCA_ASN1_LongTermValidation_Ptr;
+
+struct NETCA_ASN1_ACTargetCert_st;
+typedef struct NETCA_ASN1_ACTargetCert_st* NETCA_ASN1_ACTargetCert_Ptr;
+
+
+#define NETCA_ASN1_AC_TARGET_TYPE_NAME	0
+#define NETCA_ASN1_AC_TARGET_TYPE_GROUP	1
+#define NETCA_ASN1_AC_TARGET_TYPE_CERT	2
+
+struct NETCA_ASN1_ACTarget_st;
+typedef struct NETCA_ASN1_ACTarget_st* NETCA_ASN1_ACTarget_Ptr;
+
+
+#define NETCA_ASN1_AC_IETFATTRSYNTAX_VALUE_TYPE_OCTETSTRING	0
+#define NETCA_ASN1_AC_IETFATTRSYNTAX_VALUE_TYPE_OID			1
+#define NETCA_ASN1_AC_IETFATTRSYNTAX_VALUE_TYPE_UTF8STRING	2
+
+struct NETCA_ASN1_ACIetfAttrSyntaxValue_st;
+typedef struct NETCA_ASN1_ACIetfAttrSyntaxValue_st* NETCA_ASN1_ACIetfAttrSyntaxValue_Ptr;
+
+struct NETCA_ASN1_ACIetfAttrSyntax_st;
+typedef struct NETCA_ASN1_ACIetfAttrSyntax_st* NETCA_ASN1_ACIetfAttrSyntax_Ptr;
+
+struct NETCA_ASN1_ACSvceAuthInfo_st;
+typedef struct NETCA_ASN1_ACSvceAuthInfo_st* NETCA_ASN1_ACSvceAuthInfo_Ptr;
+
+struct NETCA_ASN1_ACRoleSyntax_st;
+typedef struct NETCA_ASN1_ACRoleSyntax_st* NETCA_ASN1_ACRoleSyntax_Ptr;
+
+struct NETCA_ASN1_ACSecurityCategory_st;
+typedef struct NETCA_ASN1_ACSecurityCategory_st* NETCA_ASN1_ACSecurityCategory_Ptr;
+
+
+struct NETCA_ASN1_ACClearance_st;
+typedef struct NETCA_ASN1_ACClearance_st* NETCA_ASN1_ACClearance_Ptr;
+
+
+struct NETCA_ASN1_ACClearAttrs_st;
+typedef struct NETCA_ASN1_ACClearAttrs_st* NETCA_ASN1_ACClearAttrs_Ptr;
+
+
+struct NETCA_ASN1_ACAAControls_st;
+typedef struct NETCA_ASN1_ACAAControls_st* NETCA_ASN1_ACAAControls_Ptr;
+
+struct NETCA_ASN1_ECC_CMS_SharedInfo_st;
+typedef struct NETCA_ASN1_ECC_CMS_SharedInfo_st* NETCA_ASN1_ECC_CMS_SharedInfo_Ptr;
+
+
+struct NETCA_ASN1_Adobe_OtherRevInfo_st;
+typedef struct NETCA_ASN1_Adobe_OtherRevInfo_st* NETCA_ASN1_Adobe_OtherRevInfo_Ptr;
+
+struct NETCA_ASN1_Adobe_RevocationInfoArchival_st;
+typedef struct NETCA_ASN1_Adobe_RevocationInfoArchival_st* NETCA_ASN1_Adobe_RevocationInfoArchival_Ptr;
+
+
+struct NETCA_ASN1_NETCA_IdentificationItem_st;
+typedef struct NETCA_ASN1_NETCA_IdentificationItem_st *NETCA_ASN1_NETCA_IdentificationItem_Ptr;
+
+
+struct NETCA_ASN1_ATSHashIndexV3_st;
+typedef struct NETCA_ASN1_ATSHashIndexV3_st* NETCA_ASN1_ATSHashIndexV3_Ptr;
+
+struct NETCA_ASN1_CAdES_OtherAttributeCertificate_st;
+typedef struct NETCA_ASN1_CAdES_OtherAttributeCertificate_st* NETCA_ASN1_CAdES_OtherAttributeCertificate_Ptr;
+
+#define NETCA_ASN1_CADES_CERTIFIEDATTRIBUTE_TYPE_ATTRIBUTECERTIFICATE					0
+#define NETCA_ASN1_CADES_CERTIFIEDATTRIBUTE_TYPE_OTHER_ATTRIBUTECERTIFICATE		1
+
+struct NETCA_ASN1_CAdES_CertifiedAttributesV2Item_st;
+typedef struct NETCA_ASN1_CAdES_CertifiedAttributesV2Item_st* NETCA_ASN1_CAdES_CertifiedAttributesV2Item_Ptr;
+
+struct NETCA_ASN1_CAdES_SignedAssertion_st;
+typedef struct NETCA_ASN1_CAdES_SignedAssertion_st* NETCA_ASN1_CAdES_SignedAssertion_Ptr;
+
+struct NETCA_ASN1_CAdES_SignerAttributeV2_st;
+typedef struct NETCA_ASN1_CAdES_SignerAttributeV2_st* NETCA_ASN1_CAdES_SignerAttributeV2_Ptr;
+
+#define NETCA_ASN1_CADES_SPDOC_SPECIFICATION_TYPE_OID					0
+#define NETCA_ASN1_CADES_SPDOC_SPECIFICATION_TYPE_URI					1
+
+struct NETCA_ASN1_CAdES_SPDocSpecification_st;
+typedef struct NETCA_ASN1_CAdES_SPDocSpecification_st* NETCA_ASN1_CAdES_SPDocSpecification_Ptr;
+
+#define NETCA_ASN1_CADES_SIGNATURE_POLICY_DOCUMENT_TYPE_ENCODED					0
+#define NETCA_ASN1_CADES_SIGNATURE_POLICY_DOCUMENT_TYPE_LOCAL_URI				1
+
+struct NETCA_ASN1_CAdES_SignaturePolicyDocument_st;
+typedef struct NETCA_ASN1_CAdES_SignaturePolicyDocument_st* NETCA_ASN1_CAdES_SignaturePolicyDocument_Ptr;
+
+struct NETCA_ASN1_CAdES_SignaturePolicyStore_st;
+typedef struct NETCA_ASN1_CAdES_SignaturePolicyStore_st* NETCA_ASN1_CAdES_SignaturePolicyStore_Ptr;
+
+
+struct NETCA_ASN1_LDAP_AttributeValueAssertion_st;
+typedef struct NETCA_ASN1_LDAP_AttributeValueAssertion_st* NETCA_ASN1_LDAP_AttributeValueAssertion_Ptr;
+
+struct NETCA_ASN1_LDAP_Attribute_st;
+typedef struct NETCA_ASN1_LDAP_Attribute_st* NETCA_ASN1_LDAP_Attribute_Ptr;
+
+struct NETCA_ASN1_LDAPResult_st;
+typedef struct NETCA_ASN1_LDAPResult_st* NETCA_ASN1_LDAPResult_Ptr;
+
+
+struct NETCA_ASN1_LDAP_Control_st;
+typedef struct NETCA_ASN1_LDAP_Control_st* NETCA_ASN1_LDAP_Control_Ptr;
+
+struct NETCA_ASN1_LDAP_SaslCredentials_st;
+typedef struct NETCA_ASN1_LDAP_SaslCredentials_st* NETCA_ASN1_LDAP_SaslCredentials_Ptr;
+
+#define NETCA_ASN1_LDAP_AUTH_SIMPLE					0
+#define NETCA_ASN1_LDAP_AUTH_SASL					1
+struct NETCA_ASN1_LDAP_AuthenticationChoice_st;
+typedef struct NETCA_ASN1_LDAP_AuthenticationChoice_st* NETCA_ASN1_LDAP_AuthenticationChoice_Ptr;
+
+
+struct NETCA_ASN1_LDAP_BindRequest_st;
+typedef struct NETCA_ASN1_LDAP_BindRequest_st* NETCA_ASN1_LDAP_BindRequest_Ptr;
+
+struct NETCA_ASN1_LDAP_BindResponse_st;
+typedef struct NETCA_ASN1_LDAP_BindResponse_st* NETCA_ASN1_LDAP_BindResponse_Ptr;
+
+#define NETCA_ASN1_LDAP_SUBSTRING_TYPE_INITIAL					0
+#define NETCA_ASN1_LDAP_SUBSTRING_TYPE_ANY						1
+#define NETCA_ASN1_LDAP_SUBSTRING_TYPE_FINAL					2
+struct NETCA_ASN1_LDAP_Substring_st;
+typedef struct NETCA_ASN1_LDAP_Substring_st* NETCA_ASN1_LDAP_Substring_Ptr;
+
+#define NETCA_ASN1_LDAP_FILTER_TYPE_AND					0
+#define NETCA_ASN1_LDAP_FILTER_TYPE_OR					1
+#define NETCA_ASN1_LDAP_FILTER_TYPE_NOT					2
+#define NETCA_ASN1_LDAP_FILTER_TYPE_EQUALITY_MATCH		3
+#define NETCA_ASN1_LDAP_FILTER_TYPE_SUBSTRINGS			4
+#define NETCA_ASN1_LDAP_FILTER_TYPE_GREATER_OR_EQUAL	5
+#define NETCA_ASN1_LDAP_FILTER_TYPE_LESS_OR_EQUAL		6
+#define NETCA_ASN1_LDAP_FILTER_TYPE_PRESENT				7
+#define NETCA_ASN1_LDAP_FILTER_TYPE_APPROX_MATCH		8
+#define NETCA_ASN1_LDAP_FILTER_TYPE_EXTENSION_MATCH		9
+
+struct NETCA_ASN1_LDAP_SubstringFilter_st;
+typedef struct NETCA_ASN1_LDAP_SubstringFilter_st* NETCA_ASN1_LDAP_SubstringFilter_Ptr;
+
+
+struct NETCA_ASN1_LDAP_MatchingRuleAssertion_st;
+typedef struct NETCA_ASN1_LDAP_MatchingRuleAssertion_st* NETCA_ASN1_LDAP_MatchingRuleAssertion_Ptr;
+
+struct NETCA_ASN1_LDAP_Filter_st;
+typedef struct NETCA_ASN1_LDAP_Filter_st* NETCA_ASN1_LDAP_Filter_Ptr;
+
+struct NETCA_ASN1_LDAP_SearchRequest_st;
+typedef struct NETCA_ASN1_LDAP_SearchRequest_st* NETCA_ASN1_LDAP_SearchRequest_Ptr;
+
+
+struct NETCA_ASN1_LDAP_SearchResultEntry_st;
+typedef struct NETCA_ASN1_LDAP_SearchResultEntry_st* NETCA_ASN1_LDAP_SearchResultEntry_Ptr;
+
+struct NETCA_ASN1_LDAP_Change_st;
+typedef struct NETCA_ASN1_LDAP_Change_st* NETCA_ASN1_LDAP_Change_Ptr;
+
+
+struct NETCA_ASN1_LDAP_ModifyRequest_st;
+typedef struct NETCA_ASN1_LDAP_ModifyRequest_st* NETCA_ASN1_LDAP_ModifyRequest_Ptr;
+
+struct NETCA_ASN1_LDAP_AddRequest_st;
+typedef struct NETCA_ASN1_LDAP_AddRequest_st* NETCA_ASN1_LDAP_AddRequest_Ptr;
+
+struct NETCA_ASN1_LDAP_ModifyDNRequest_st;
+typedef struct NETCA_ASN1_LDAP_ModifyDNRequest_st* NETCA_ASN1_LDAP_ModifyDNRequest_Ptr;
+
+struct NETCA_ASN1_LDAP_CompareRequest_st;
+typedef struct NETCA_ASN1_LDAP_CompareRequest_st* NETCA_ASN1_LDAP_CompareRequest_Ptr;
+
+struct NETCA_ASN1_LDAP_ExtendedRequest_st;
+typedef struct NETCA_ASN1_LDAP_ExtendedRequest_st* NETCA_ASN1_LDAP_ExtendedRequest_Ptr;
+
+struct NETCA_ASN1_LDAP_ExtendedResponse_st;
+typedef struct NETCA_ASN1_LDAP_ExtendedResponse_st* NETCA_ASN1_LDAP_ExtendedResponse_Ptr;
+
+struct NETCA_ASN1_LDAP_IntermediateResponse_st;
+typedef struct NETCA_ASN1_LDAP_IntermediateResponse_st* NETCA_ASN1_LDAP_IntermediateResponse_Ptr;
+
+#define NETCA_ASN1_LDAP_MESSAGE_TYPE_BIND_REQUEST					0
+#define NETCA_ASN1_LDAP_MESSAGE_TYPE_BIND_RESPONSE					1
+#define NETCA_ASN1_LDAP_MESSAGE_TYPE_UNBIND_REQUEST					2
+#define NETCA_ASN1_LDAP_MESSAGE_TYPE_SEARCH_REQUEST					3
+#define NETCA_ASN1_LDAP_MESSAGE_TYPE_SEARCH_RESULT_ENTRY			4
+#define NETCA_ASN1_LDAP_MESSAGE_TYPE_SEARCH_RESULT_DONE				5
+#define NETCA_ASN1_LDAP_MESSAGE_TYPE_SEARCH_RESULT_REFERENCE		6
+#define NETCA_ASN1_LDAP_MESSAGE_TYPE_MODIFY_REQUEST					7
+#define NETCA_ASN1_LDAP_MESSAGE_TYPE_MODIFY_RESPONSE				8
+#define NETCA_ASN1_LDAP_MESSAGE_TYPE_ADD_REQUEST					9
+#define NETCA_ASN1_LDAP_MESSAGE_TYPE_ADD_RESPONSE					10
+#define NETCA_ASN1_LDAP_MESSAGE_TYPE_DEL_REQUEST					11
+#define NETCA_ASN1_LDAP_MESSAGE_TYPE_DEL_RESPONSE					12
+#define NETCA_ASN1_LDAP_MESSAGE_TYPE_MODIFYDN_REQUEST				13
+#define NETCA_ASN1_LDAP_MESSAGE_TYPE_MODIFYDN_RESPONSE				14
+#define NETCA_ASN1_LDAP_MESSAGE_TYPE_COMPARE_REQUEST				15
+#define NETCA_ASN1_LDAP_MESSAGE_TYPE_COMPARE_RESPONSE				16
+#define NETCA_ASN1_LDAP_MESSAGE_TYPE_ABANDON_REQUEST				17
+#define NETCA_ASN1_LDAP_MESSAGE_TYPE_EXTENDED_REQUEST				18
+#define NETCA_ASN1_LDAP_MESSAGE_TYPE_EXTENDED_RESPONSE				19
+#define NETCA_ASN1_LDAP_MESSAGE_TYPE_INTERMEDIATE_RESPONSE			20
+
+
+struct NETCA_ASN1_LDAPMessage_st;
+typedef struct NETCA_ASN1_LDAPMessage_st* NETCA_ASN1_LDAPMessage_Ptr;
+
+
+struct NETCA_PKCS7_SignedAndEnvelopedData_st;
+typedef struct NETCA_PKCS7_SignedAndEnvelopedData_st* NETCA_PKCS7_SignedAndEnvelopedData_Ptr;
+
+
+struct NETCA_ASN1_SCVPIssuerSerial_st;
+typedef struct NETCA_ASN1_SCVPIssuerSerial_st* NETCA_ASN1_SCVPIssuerSerial_Ptr;
+
+struct NETCA_ASN1_SCVPCertID_st;
+typedef struct NETCA_ASN1_SCVPCertID_st* NETCA_ASN1_SCVPCertID_Ptr;
+
+
+
+#define NETCA_ASN1_SCVP_PKC_REFERENCE_TYPE_CERT			0
+#define NETCA_ASN1_SCVP_PKC_REFERENCE_TYPE_PKC_REF		1
+
+struct NETCA_ASN1_SCVP_PKCReference_st;
+typedef struct NETCA_ASN1_SCVP_PKCReference_st* NETCA_ASN1_SCVP_PKCReference_Ptr;
+
+
+#define NETCA_ASN1_SCVP_AC_REFERENCE_TYPE_ATTR_CERT		2
+#define NETCA_ASN1_SCVP_AC_REFERENCE_TYPE_AC_REF		3
+
+struct NETCA_ASN1_SCVP_ACReference_st;
+typedef struct NETCA_ASN1_SCVP_ACReference_st* NETCA_ASN1_SCVP_ACReference_Ptr;
+
+
+#define NETCA_ASN1_SCVP_CERT_REFERENCE_TYPE_PKC		1
+#define NETCA_ASN1_SCVP_CERT_REFERENCE_TYPE_AC		2
+
+struct NETCA_ASN1_SCVP_CertReference_st;
+typedef struct NETCA_ASN1_SCVP_CertReference_st* NETCA_ASN1_SCVP_CertReference_Ptr;
+
+#define NETCA_ASN1_SCVP_CERT_REFERENCES_TYPE_PKC_REFS		0
+#define NETCA_ASN1_SCVP_CERT_REFERENCES_TYPE_AC_REFS		1
+
+struct NETCA_ASN1_SCVP_CertReferences_st;
+typedef struct NETCA_ASN1_SCVP_CertReferences_st* NETCA_ASN1_SCVP_CertReferences_Ptr;
+
+struct NETCA_ASN1_SCVP_ValidationPolRef_st;
+typedef struct NETCA_ASN1_SCVP_ValidationPolRef_st* NETCA_ASN1_SCVP_ValidationPolRef_Ptr;
+
+struct NETCA_ASN1_SCVP_ValidationAlg_st;
+typedef struct NETCA_ASN1_SCVP_ValidationAlg_st* NETCA_ASN1_SCVP_ValidationAlg_Ptr;
+
+struct NETCA_ASN1_SCVP_NameValidationAlgParms_st;
+typedef struct NETCA_ASN1_SCVP_NameValidationAlgParms_st* NETCA_ASN1_SCVP_NameValidationAlgParms_Ptr;
+
+struct NETCA_ASN1_SCVP_ResponseFlags_st;
+typedef struct NETCA_ASN1_SCVP_ResponseFlags_st* NETCA_ASN1_SCVP_ResponseFlags_Ptr;
+
+struct NETCA_ASN1_SCVP_OtherRevInfo_st;
+typedef struct NETCA_ASN1_SCVP_OtherRevInfo_st* NETCA_ASN1_SCVP_OtherRevInfo_Ptr;
+
+#define NETCA_ASN1_SCVP_REVOCATION_INFO_TYPE_CRL			0
+#define NETCA_ASN1_SCVP_REVOCATION_INFO_TYPE_DELTA_CRL		1
+#define NETCA_ASN1_SCVP_REVOCATION_INFO_TYPE_OCSP			2
+#define NETCA_ASN1_SCVP_REVOCATION_INFO_TYPE_OTHER			3
+
+struct NETCA_ASN1_SCVP_RevocationInfo_st;
+typedef struct NETCA_ASN1_SCVP_RevocationInfo_st* NETCA_ASN1_SCVP_RevocationInfo_Ptr;
+
+
+struct NETCA_ASN1_SCVP_ValidationPolicy_st;
+typedef struct NETCA_ASN1_SCVP_ValidationPolicy_st* NETCA_ASN1_SCVP_ValidationPolicy_Ptr;
+
+struct NETCA_ASN1_SCVP_Query_st;
+typedef struct NETCA_ASN1_SCVP_Query_st* NETCA_ASN1_SCVP_Query_Ptr;
+
+struct NETCA_ASN1_SCVP_CVRequest_st;
+typedef struct NETCA_ASN1_SCVP_CVRequest_st* NETCA_ASN1_SCVP_CVRequest_Ptr;
+
+struct NETCA_ASN1_SCVP_ResponseStatus_st;
+typedef struct NETCA_ASN1_SCVP_ResponseStatus_st* NETCA_ASN1_SCVP_ResponseStatus_Ptr;
+
+struct NETCA_ASN1_SCVP_HashValue_st;
+typedef struct NETCA_ASN1_SCVP_HashValue_st* NETCA_ASN1_SCVP_HashValue_Ptr;
+
+#define NETCA_ASN1_SCVP_REQUEST_REFERENCE_TYPE_REQ_HASH			0
+#define NETCA_ASN1_SCVP_REQUEST_REFERENCE_TYPE_FULL_REQ			1
+struct NETCA_ASN1_SCVP_RequestReference_st;
+typedef struct NETCA_ASN1_SCVP_RequestReference_st* NETCA_ASN1_SCVP_RequestReference_Ptr;
+
+struct NETCA_ASN1_SCVP_ReplyCheck_st;
+typedef struct NETCA_ASN1_SCVP_ReplyCheck_st* NETCA_ASN1_SCVP_ReplyCheck_Ptr;
+
+
+struct NETCA_ASN1_SCVP_ReplyWantBack_st;
+typedef struct NETCA_ASN1_SCVP_ReplyWantBack_st* NETCA_ASN1_SCVP_ReplyWantBack_Ptr;
+
+struct NETCA_ASN1_SCVP_CertReply_st;
+typedef struct NETCA_ASN1_SCVP_CertReply_st* NETCA_ASN1_SCVP_CertReply_Ptr;
+
+struct NETCA_ASN1_SCVP_CVResponse_st;
+typedef struct NETCA_ASN1_SCVP_CVResponse_st* NETCA_ASN1_SCVP_CVResponse_Ptr;
+
+struct NETCA_ASN1_SCVP_ValPolRequest_st;
+typedef struct NETCA_ASN1_SCVP_ValPolRequest_st* NETCA_ASN1_SCVP_ValPolRequest_Ptr;
+
+struct NETCA_ASN1_SCVP_KeyAgreePublicKey_st;
+typedef struct NETCA_ASN1_SCVP_KeyAgreePublicKey_st* NETCA_ASN1_SCVP_KeyAgreePublicKey_Ptr;
+
+
+struct NETCA_ASN1_SCVP_ValPolResponse_st;
+typedef struct NETCA_ASN1_SCVP_ValPolResponse_st* NETCA_ASN1_SCVP_ValPolResponse_Ptr;
+
+struct NETCA_ASN1_SCVP_RevInfoWantBack_st;
+typedef struct NETCA_ASN1_SCVP_RevInfoWantBack_st* NETCA_ASN1_SCVP_RevInfoWantBack_Ptr;
+
+struct NETCA_ASN1_CMSAlgorithmProtection_st;
+typedef struct NETCA_ASN1_CMSAlgorithmProtection_st* NETCA_ASN1_CMSAlgorithmProtection_Ptr;
+
+struct NETCA_ASN1_SES_ExtData_st;
+typedef struct NETCA_ASN1_SES_ExtData_st* NETCA_ASN1_SES_ExtData_Ptr;
+
+struct NETCA_ASN1_SES_Header_st;
+typedef struct NETCA_ASN1_SES_Header_st* NETCA_ASN1_SES_Header_Ptr;
+
+struct NETCA_ASN1_SES_ESPropertyInfo_st;
+typedef struct NETCA_ASN1_SES_ESPropertyInfo_st* NETCA_ASN1_SES_ESPropertyInfo_Ptr;
+
+struct NETCA_ASN1_SES_ESPictureInfo_st;
+typedef struct NETCA_ASN1_SES_ESPictureInfo_st* NETCA_ASN1_SES_ESPictureInfo_Ptr;
+
+struct NETCA_ASN1_SES_SealInfo_st;
+typedef struct NETCA_ASN1_SES_SealInfo_st* NETCA_ASN1_SES_SealInfo_Ptr;
+
+struct NETCA_ASN1_SES_SignInfo_st;
+typedef struct NETCA_ASN1_SES_SignInfo_st* NETCA_ASN1_SES_SignInfo_Ptr;
+
+struct NETCA_ASN1_SES_SESealTbs_st;
+typedef struct NETCA_ASN1_SES_SESealTbs_st* NETCA_ASN1_SES_SESealTbs_Ptr;
+
+struct NETCA_ASN1_SES_SESeal_st;
+typedef struct NETCA_ASN1_SES_SESeal_st* NETCA_ASN1_SES_SESeal_Ptr;
+
+struct NETCA_ASN1_SES_TBS_Sign_st;
+typedef struct NETCA_ASN1_SES_TBS_Sign_st* NETCA_ASN1_SES_TBS_Sign_Ptr;
+
+struct NETCA_ASN1_SES_Signature_st;
+typedef struct NETCA_ASN1_SES_Signature_st* NETCA_ASN1_SES_Signature_Ptr;
+
+struct NETCA_ASN1_GB_SES_CertDigestObj_st;
+typedef struct NETCA_ASN1_GB_SES_CertDigestObj_st* NETCA_ASN1_GB_SES_CertDigestObj_Ptr;
+
+#define NETCA_ASN1_GB_SES_CERTLIST_TYPE_CERT			1
+#define NETCA_ASN1_GB_SES_CERTLIST_TYPE_CERT_DIGEST		2
+
+struct NETCA_ASN1_GB_SES_ESPropertyInfo_st;
+typedef struct NETCA_ASN1_GB_SES_ESPropertyInfo_st* NETCA_ASN1_GB_SES_ESPropertyInfo_Ptr;
+
+struct NETCA_ASN1_GB_SES_SealInfo_st;
+typedef struct NETCA_ASN1_GB_SES_SealInfo_st* NETCA_ASN1_GB_SES_SealInfo_Ptr;
+
+struct NETCA_ASN1_GB_SES_SESeal_st;
+typedef struct NETCA_ASN1_GB_SES_SESeal_st* NETCA_ASN1_GB_SES_SESeal_Ptr;
+
+struct NETCA_ASN1_GB_SES_TBS_Sign_st;
+typedef struct NETCA_ASN1_GB_SES_TBS_Sign_st* NETCA_ASN1_GB_SES_TBS_Sign_Ptr;
+
+struct NETCA_ASN1_GB_SES_Signature_st;
+typedef struct NETCA_ASN1_GB_SES_Signature_st* NETCA_ASN1_GB_SES_Signature_Ptr;
+
+#ifdef __cplusplus
+	}	
+#endif
+#endif

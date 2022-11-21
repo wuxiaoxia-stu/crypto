@@ -1,0 +1,19 @@
+GetDeviceInfo.class主要用于服务器端列出设备信息，它需要依赖于NetcaJCrypto.jar
+主要用法如下：
+java GetDeviceInfo
+打印java.library.path的值，并列出服务器端使用的设备类型和名称
+java GetDeviceInfo -listall
+列出所有设备类型和名称
+java GetDeviceInfo -1
+列出当前所有设备的信息。不能列出得安加密机的密钥对信息
+java GetDeviceInfo type
+type为整数，表示设备类型
+列出当前设备类型为type的所有设备的信息。不能列出得安加密机的密钥对信息
+java GetDeviceInfo type sn
+type为整数，表示设备类型。sn为设备序列号
+列出当前设备类型为type，序列号为sn的设备的信息。不能列出得安加密机的密钥对信息
+java GetDeviceInfo type sn pwd
+type为整数，表示设备类型。sn为设备序列号。pwd为密码
+列出当前设备类型为type，序列号为sn的设备的信息。
+
+

@@ -1,0 +1,452 @@
+
+<html>
+	<head>
+		<title>登录页面</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=GBK">				
+		<script src="netcapscertapphlpchrome.js" charset="utf8"></script>		
+	</head>
+	<body>
+		<embed id="pki" hidden="true" type="application/x-netcapki"/>
+		<embed type="application/x-netca_signseal" id="signseal" hidden="true" >
+		<form name="form1" action="VerifyFrom.jsp" method="POST">
+			<input type="hidden" name="signData" value="">
+			<input type="button" value="点击提交登录证书." onclick="SignP7();">
+			<div class="divArgs_label">原文：</div>
+			<div class="divArgs_item">
+				<textarea rows="6" cols="80" id="SignPKCS7_content" >NETCA</textarea>
+			</div>
+			<div class="divArgs_label">签名结果：</div>
+			<div class="divArgs_item">
+				<textarea rows="6" cols="80" id="SignPKCS7_signdataed" ></textarea>
+			</div>
+			<tr height="40"><td colspan="4" ></td></tr>
+			<tr>
+				<td class="styRow4" colspan="1">
+					<input type="button" value="数字签名" onclick="Signdata();">
+				</td>
+				<td class="styRow4" colspan="1">
+					<input type="button" value="签名验证" onclick="verifySigndataed();">
+				</td>
+			</tr>			
+			<tr>
+				<td class="styRow4" colspan="1">
+					<input type="button" value="获取key的序列号" onclick="onclickgetDeviceNumber();">
+				</td>
+				
+			</tr>
+			<div
+			 <tr>
+			 证书扩展OID:
+		    <input type="text" id="certOID" size="64" >
+			<td> 证书扩展编码类型:
+				<select id="selectType4" name="selectType4">
+			<option value=1 selected="selected">NETCAPKI_NETCA_OID_UTF8STRING</option>
+			<option value=2>NETCAPKI_NETCA_OID_PRINTABLESTRING</option>
+			<option value=3>NETCAPKI_NETCA_OID_IA5STRING</option>
+			<option value=4>NETCAPKI_NETCA_OID_VISIBLESTRING</option>
+			<option value=5>NETCAPKI_NETCA_OID_BMPSTRING</option>			
+			</select>
+			</td>
+		   <td class="styRow5" colspan="1">
+					<input type="button" value="获取证书扩展域" onclick="onclickGetCertExtensionStringValue();">
+			</td>			
+			</tr>			
+			</div>
+			<input type="hidden" name="cipher" value="">
+			<div class="divArgs_label">明文：</div>
+			<div class="divArgs_item">
+				<textarea rows="6" cols="80" id="clear_content" >NETCA</textarea>
+			</div>
+			<div class="divArgs_label">密文：</div>
+			<div class="divArgs_item">
+				<textarea rows="6" cols="80" id="cipher_data" ></textarea>
+			</div>
+			<tr height="40"><td colspan="4" ></td></tr>
+			<tr>
+				<td class="styRow4" colspan="1">
+					<input type="button" value="非对称加密" onclick="onclickCertEncrypt();">
+				</td>
+				<td class="styRow4" colspan="1">
+					<input type="button" value="非对称解密" onclick="onclickCertDecrypt();">
+				</td>
+			</tr>
+			<tr>
+				<td class="styRow4" colspan="1">
+					<input type="button" value="数字信封加密" onclick="onclickEnvelopedDataEncrypt();">
+				</td>
+				<td class="styRow4" colspan="1">
+					<input type="button" value="数字信封解密" onclick="onclickEnvelopedDataDecrypt();">
+				</td>
+			</tr>
+			<div>	
+			<div class="divArgs_label">要验证的证书：</div>
+			<div class="divArgs_item">
+				<textarea rows="6" cols="80" id="verify_cert" ></textarea>				
+			</div>
+			<tr>
+				<td class="styRow4" colspan="1">
+					<input type="button" value="验证证书" onclick="onclickVerifyCert();">
+				</td>
+			</tr>
+			</div>
+			
+			<div>		
+			
+			<div class="divArgs_label">签章数据：</div>
+			<div class="divArgs_item">
+				<textarea rows="6" cols="80" id="seal_data" ></textarea>
+				<img src="" id="seal_pic"/>
+			</div>
+			<tr>
+				<td class="styRow4" colspan="1">
+					<input type="button" value="获取签章数据" onclick="onclickGetSealData();">
+				</td>
+			</tr>
+			</div>
+		</form>
+		
+		<script type="text/javascript">
+		
+		function onclickVerifyCert()
+		{
+			try{
+					
+					var b64cert = document.getElementById("verify_cert").value;
+					if(b64cert=="")
+					{
+						alert("证书不能为空");
+						return;
+					}					
+					var isNormal= VerifyCert(b64cert);					
+					if(isNormal==1)
+					{
+						alert("证书有效！");
+					}
+					else if(isNormal==-1){
+						alert("证书状态无法确定！");
+					}
+					else if(isNormal==0)
+					{
+						alert("证书无效");
+					}
+					else{
+						alert("验证出错");					
+					}
+				
+				}
+				catch (e) 
+				{
+					alert(e);
+					return;
+				}		
+		
+		
+		
+		}
+		
+		function onclickGetSealData()
+		{
+		
+			try{
+					var plugin = document.getElementById("signseal");
+					if(plugin==null)
+					{ 
+						alert("电子签章插件获取失败！"); 
+						return;
+					}
+					var cert = SelectMyCert(1, "IssuerCN~'NETCA'&&InValidity='True'", 1, 1);
+					if (cert == null) 
+					{
+						return;
+					}
+					
+					var keypair =cert.GetKeyPair("",0,2);
+					var device =keypair.GetDevice();
+					var serialNumber=device.SerialNumber;
+					var deviceType=device.type;
+					plugin.Bind(deviceType, serialNumber);
+   
+					var count = plugin.GetCount();
+					if(count < 1)
+					{
+						alert("印章数量小于1！");
+						return;
+					}
+					alert("印章数量：" + count);
+					var sealName = plugin.GetSealName(0);
+					if(sealName == undefined)
+					{
+						alert("获取印章名称失败！");
+						return;
+					}
+					alert("印章名称：" + sealName);
+			
+					var sealType = plugin.GetSealType(0);
+					if(sealType == undefined)
+					{
+						alert("获取印章类型失败！");
+						return;
+					}
+					alert("印章类型：" + sealType);
+			
+					var sealData = plugin.ReadSealData(0);
+					if(sealData == undefined)
+					{
+						alert("获取印章数据Base64编码失败！");
+						return;
+					}
+					
+					document.getElementById("seal_data").value=sealData;					
+					document.getElementById("seal_pic").src="data:image/png;base64," + sealData;
+				
+				}
+				catch (e) 
+				{
+					alert(e);
+					return;
+				}		
+		
+		}
+		
+			function onclickEnvelopedDataDecrypt()
+			{
+			
+				try{
+					
+					var b64cipher = document.getElementById("cipher_data").value;
+					if(b64cipher=="")
+					{
+						alert("密文不能为空");
+						return;
+					}					
+					var clear = envelopedDataDecrypt(b64cipher);					
+					var clearText = StrEncode("UTF-8", clear);					
+					document.getElementById("clear_content").value=clearText;
+				
+				}
+				catch (e) 
+				{
+					alert(e);
+					return;
+				}			
+			
+			
+			}
+			
+			function onclickEnvelopedDataEncrypt()
+			{
+				try{
+					var clear = document.getElementById("clear_content").value;
+					if(clear=="")
+					{
+						alert("原文不能为空");
+						return;
+					}
+					var cert = SelectMyCert(2, "IssuerCN~'NETCA'&&InValidity='True'", 1, 1);
+					if (cert == null) 
+					{
+						return;
+					}					
+					var clearText = StrDecode("UTF-8", clear);
+					var cipher = envelopedDataEncrypt(cert,clearText);					
+					document.getElementById("cipher_data").value=cipher;
+				
+				}
+				catch (e) 
+				{
+					alert(e);
+					return;
+				}				
+			
+			}
+			
+			
+			function onclickCertDecrypt()
+			{
+				try{
+					
+					var b64cipher = document.getElementById("cipher_data").value;
+					if(b64cipher=="")
+					{
+						alert("密文不能为空");
+						return;
+					}	
+					var cert = SelectMyCert(2, "IssuerCN~'NETCA'", 1, 1);
+					if (cert == null) 
+					{
+						return;
+					}				
+										
+					var cipherText = StrDecode("Base64", b64cipher);									
+					var clear = certDecrypt(cert, cipherText);	
+					var clearText = StrEncode("UTF-8", clear);					
+					document.getElementById("clear_content").value=clearText;					
+				}
+				
+				catch (e) 
+				{
+					alert(e);
+					return;
+				}			
+			
+			}
+			
+			function onclickCertEncrypt()
+			{
+				try{
+					var clear = document.getElementById("clear_content").value;
+					if(clear=="")
+					{
+						alert("明文不能为空");
+						return;
+					}	
+					var cert = SelectMyCert(2, "IssuerCN~'NETCA'&&InValidity='True'", 1, 1);
+					if (cert == null) 
+					{
+						return;
+					}
+					
+					var clearText = StrDecode("UTF-8", clear);
+					var cipher = certEncrypt(cert,clearText);
+					var b64cipher = StrEncode("Base64", cipher);
+					form1.cipher.value = b64cipher;
+					document.getElementById("cipher_data").value=b64cipher;
+				
+				}
+				catch (e) 
+				{
+					alert(e);
+					return;
+				}			
+			
+			}
+			
+			function SignP7()
+			{			
+				try
+				{
+					var content = "yyyyy";
+					var bRand = StrDecode("UTF-8", content);
+					//选择证书
+					var cert = SelectMyCert(1, "IssuerCN~'NETCA'&&InValidity='True'", 1, 1);
+					if (cert == null) 
+					{
+						return;
+					}
+					//对随机数进行PKCS#7签名
+					var sign = SignPKCS7(cert, bRand, 1, "", "");
+					var b64Sign = StrEncode("Base64", sign);
+					form1.signData.value = b64Sign;
+					alert(b64Sign);
+					//form1.submit();
+					//var cms = StrDecode("Base64", b64Sign);
+					//var bcontent = StrDecode("UTF-8", content);
+					//var ocert = SimpleVerifyPKCS7(cms, bcontent);
+					//alert("验证成功，证书摘要为：" + GetCertInfo(ocert));
+				}
+				catch (e) 
+				{
+					alert(e);
+					return;
+				}
+			}
+			function Signdata()
+			{			
+				try
+				{
+					var content = document.getElementById("SignPKCS7_content").value;
+					if(content=="")
+					{
+						alert("原文不能为空");
+						return;
+					}
+					var bRand = StrDecode("UTF-8", content);
+					//选择证书
+					var cert = SelectMyCert(1, "IssuerCN~'NETCA'&&InValidity='True'", 1, 1);
+					if (cert == null) 
+					{
+						return;
+					}
+					//对随机数进行PKCS#7签名
+					var sign = SignPKCS7(cert, bRand, 0, "", "");
+					var b64Sign = StrEncode("Base64", sign);
+					form1.signData.value = b64Sign;
+					document.getElementById("SignPKCS7_signdataed").innerHTML=b64Sign;					
+				}
+				catch (e) 
+				{
+					alert(e);
+					return;
+				}
+			}
+			function verifySigndataed()
+			{			
+				try
+				{
+					var b64Sign = document.getElementById("SignPKCS7_signdataed").innerHTML;
+					var content = document.getElementById("SignPKCS7_content").innerHTML;
+					var bcontent = "";
+					if(b64Sign ==""||content=="")
+					{
+						alert("签名值或者原文不能为空");
+						return;
+					}
+					var cms = StrDecode("Base64", b64Sign);
+					if (content != "" && content != null)
+					{
+						alert(content);
+						bcontent = StrDecode("UTF-8", content);
+					}					
+					var ocert = SimpleVerifyPKCS7(cms, bcontent);
+					var thumprint =GetCertTHUMBPRINT(ocert);
+					alert("验证成功，证书缩微图为：" +thumprint );
+				}
+				catch (e) 
+				{
+					alert(e);
+					return;
+				}
+			}
+
+			function onclickgetDeviceNumber()
+			{
+				try
+				{
+					var devsn = getDeviceNumber();
+					alert(devsn);
+				}
+				catch (e)
+				{
+					alert(e);
+				}
+			}
+
+			function onclickGetCertExtensionStringValue()
+			{
+				try
+				{
+					var oid=document.getElementById("certOID").value;
+					if(oid =="")
+					{
+						alert("证书扩展OID不能为空");
+						return;
+					}
+					//选择证书
+					var cert = SelectMyCert(1, "IssuerCN~'NETCA'", 1, 1);
+					if (cert == null) 
+					{
+						return;
+					}
+					
+					var certOIDEncodeType = parseInt(selectType4.value);					
+					var extension = GetCertExtensionStringValue(cert,oid,certOIDEncodeType);
+					alert(extension);
+				}
+				catch (e)
+				{
+					alert(e);
+				}
+			}
+			</script>
+	</body>
+</html>

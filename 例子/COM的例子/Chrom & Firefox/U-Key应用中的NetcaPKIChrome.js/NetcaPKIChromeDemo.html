@@ -1,0 +1,396 @@
+<HTML>
+<head>
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="NetcaPKIChrome.js"  charset="utf-8"></script>
+<SCRIPT ID=clientEventHandlersJS LANGUAGE=javascript>
+
+<!--
+//测试-判断控件是否安装成功[测试结果：失败]
+function isInstall() 
+{//输入姆印，选择证书  
+   var isOK=isPKIInstalled();
+   if(isOK==true)
+   {
+	alert("控件安装成功！");
+   }
+   else
+   {
+	alert("控件安装失败！");
+   }
+   
+}
+
+
+/**============================
+*  		5.3设备类
+***============================
+*/
+	
+//测试-获取设备集的个数。[测试结果：成功]
+function testgetAllDevicesCount()
+{	
+	var	count = getAllDevicesCount("","");
+	alert("获取设备集的个数："+count);
+}
+
+//测试-获取第index个设备, index>=1 [测试结果：成功]
+function testgetDeviceFromDevicesSet()
+{
+	var indexValue = frmdemo.index.value;
+	try {
+		var index = parseInt(indexValue);
+		var	count = getAllDevicesCount("","");
+		if(index<0 || index>count)
+		{
+			alert("查找设备i超出了指定范围！");
+		}
+		var device = getDeviceFromDevicesSet(index);
+		alert("卷标-->"+device.Label+" 序列号--> "+device.SerialNumber +" 类型--> "+ device.Type);
+	}
+	catch(e)
+	{
+		alert("测试不成功!请检查输入整数"+e.description);
+		return false;
+	}
+}
+
+//测试-根据设备类型type，设备序列号sn和标识获取设备flag用于是否能查找到某设备[测试结果：成功]
+function testgetDevice()
+{
+	//type,sn,flag
+	var typeValue = frmdemo.type.value;
+	var snValue = frmdemo.sn.value;
+	var flagValue = frmdemo.flag.value;
+	if(snValue==null || snValue=="")
+	{
+		alert("请输入设备序列号sn值");
+		return;
+	}
+	try
+	{
+		var type = parseInt(typeValue);
+//		var isOK = getDevice(33, "1209160100013A2E::NETCA","");
+		var isOK = getDevice(type, snValue,"");
+		if(isOK==true)
+		{
+			alert("查找设备成功！");
+		}
+		else
+		{
+			alert("查找设备失败！");
+		}
+	}
+	catch(e)
+	{
+		alert("测试不成功!"+e.description);
+		return false;
+	}	
+}
+
+
+/**============================
+*  		5.5	证书类
+***============================
+*/
+
+//测试-从证书库中获取符合条件的所有证书，用于是否能查找到某设备。
+function testgetStoreCerts()
+{
+	var storeLocation = parseInt(selectType1.value);
+	var storeName = selectType2.value;
+	var certType = parseInt(selectType3.value);
+	var netcaType = parseInt(selectType4.value);
+	try{
+		var certArray=getStoreCerts(storeLocation,storeName,certType,netcaType);
+		if(certArray.length<=0)
+		{
+			alert("获取证书失败。");
+			return false;
+		}
+		alert("获取证书库成功。"+"证书个数-->"+certArray.length);
+		return true;
+   }
+   catch (e)
+   {
+		alert("测试不成功!"+e.description);
+		return false;
+   } 
+}
+
+//测试-弹出所有符合条件的证书供选择
+function testchooseStoreCerts()
+{
+	var storeLocation = parseInt(selectType1.value);
+	var storeName = selectType2.value;
+	var certType = parseInt(selectType3.value);
+	var netcaType = parseInt(selectType4.value);
+	//alert(storeLocation+storeName+certType+netcaType );
+	try{
+		var cert=chooseStoreCerts(storeLocation,storeName,certType,netcaType);
+		if(cert==null ||""==cert)
+		{
+			alert("获取证书失败。");
+			return false;
+		}
+		alert("证书主体-->> "+cert.Subject);
+		alert("序列号-->> "+cert.SerialNumber);
+		alert("颁发者-->> "+cert.Issuer);		
+		return true;
+   }
+   catch (e)
+   {
+		alert("测试不成功!请选择查看证书"+e.description);
+		return false;
+   } 
+   
+}
+
+//弹出从设备集中所有符合条件的证书供选择，返回证书
+function testchooseDeviceSetCerts()
+{
+	
+	var certType = parseInt(selectType3.value);
+	var netcaType = parseInt(selectType4.value);
+	try{
+		var cert = chooseDeviceSetCerts(certType, netcaType);
+		if(cert==null ||""==cert)
+		{
+			alert("获取证书失败。");
+			return false;
+		}
+		alert("证书主体-->> "+cert.Subject);
+		alert("序列号-->> "+cert.SerialNumber);
+		alert("颁发者-->> "+cert.Issuer);		
+		return true;
+		
+   }
+   catch (e)
+   {
+		alert("测试不成功!请选择查看证书"+e.description);
+		return false;
+   } 	
+}
+
+//测试-解析指定证书 getCertInfo(oCert, iValueType)
+function testgetCertInfo()
+{
+	//1、获取证书
+	var storeLocation = parseInt(selectType1.value);
+	var storeName = selectType2.value;
+	var certType = parseInt(selectType3.value);
+	var netcaType = parseInt(selectType4.value);
+	try{
+		var cert=chooseStoreCerts(storeLocation,storeName,certType,netcaType);
+		if(cert==null ||""==cert)
+		{
+			alert("获取证书失败。");
+			return false;
+		}
+		//2、解析证书
+		var info="";
+	    for(var i =0;i<42;i++)
+	    {
+			var certInfo = getCertInfo(cert,i);
+			if(certInfo != null &&certInfo.length>0)
+			{
+				info=info+i+": "+ certInfo+"\n";
+			}
+			
+	     }
+   	    alert(info);
+   }
+   catch (e)
+   {
+		alert("测试不成功!请选择查看证书"+e.description);
+		return false;
+   }
+   
+	
+}
+ 
+/************  pkcs7签名            ******/
+function signPKCS7EX() 
+{
+	var info;
+	var str = textData.value;
+	//alert(str);
+	
+	var storeLocation = parseInt(selectType1.value);
+	var storeName = selectType2.value;
+	var certType = parseInt(selectType3.value);
+	var netcaType = parseInt(selectType4.value);
+	var cert;
+	try{
+		cert=chooseStoreCerts(storeLocation,storeName,certType,netcaType);
+		if(cert==null ||""==cert)
+		{
+			alert("获取证书失败。");
+			return false;
+		}	
+   }
+   catch (e)
+   {
+		alert("测试不成功!请选择查看证书"+e.description);
+		return false;
+   }
+   
+   try
+	 {
+   	   info=signPKCS7(cert,str,1);
+ 	   textSignData.value = info;
+   }
+   catch (e)
+   {
+			alert("测试不成功!"+e.description);
+	    return null;
+   }
+}
+
+
+function verifyPKCS7EX() {
+   try{
+	  //alert(textData.value);
+	  //alert(textSignData.value);
+	   var rt=verifyPKCS7(textData.value,textSignData.value,1);
+	   
+	  if(!rt){
+	   	alert("验证不通过");
+	   }
+	   else if(rt){
+	   	alert("验证通过");
+	   }
+	   
+   }
+   catch (e)
+   {
+		alert("测试不成功!"+e.description);
+		return null;
+   }
+   
+}
+
+//-->
+</SCRIPT>
+</head>
+<BODY>
+<!--
+<OBJECT id="test" classid="clsid:11E27019-33D7-4B76-B73C-11DB7F496813" 
+CODEBASE="test.dll" style="WIDTH: 5px; HEIGHT: 5px " border=1 visible=0>
+
+</OBJECT>;DISPLAY: none-->
+<!---->
+<embed id="pki" hidden="true" type="application/x-netcapki"/>
+<form name=frmdemo >
+  <table border=1 align=center width="80%">
+    <caption>
+    <font size="6" color="#n65ei7" >NetcaPKIChrome JS  DEMO </font>
+    </caption>
+    <tr>
+      <td  bgcolor="#00CCCC" colspan="5" > 检测测试 </td>
+    </tr>
+    <tr>
+      <td ><input type="button" value="控件安装检测"  onclick="return isInstall()">
+      </td>
+    </tr>
+    <tr>
+      <td  bgcolor="#00CCCC" colspan="5" >设备测试</td>
+    </tr>
+    <tr>
+      <td ><input name="button" type="button"  onClick="return testgetAllDevicesCount()" value="获取所有设备个数" ></td>
+    </tr>
+    <tr>
+      <td> 您要获取第i个设备，输入i的值 </td>
+      <td><input type="text" id="index"   value="" />
+      </td>
+      <td ><input type="button" value="获取设备集中的设备"   onclick="return testgetDeviceFromDevicesSet()" />
+      </td>
+    </tr>
+    <tr>
+      <td> 查找设备是否存在 </td>
+      <td> 类型:
+        <input type="text" id="type"   value="" width="25"/>
+      </td>
+      <td> sn:
+        <input type="text" id="sn"   value="" />
+      </td>
+      <td> flag:
+        <input type="text" id="flag"   value="" />
+      </td>
+      <td ><input type="button" value="查找设备"   onclick="return testgetDevice()" />
+      </td>
+    </tr>
+    <tr>
+      <td  bgcolor="#00CCCC" colspan="5" >证书测试</td>
+    </tr>
+    <tr>
+      <td> 证书库类型:storeLocation
+        <select id="selectType1" name="selectType1">
+          <option value=0 selected="selected">NETCAPKI_CERT_STORE_TYPE_CURRENT_USER</option>
+          <option value=1>NETCAPKI_CERT_STORE_TYPE_LOCAL_MACHINE</option>
+          <option value=2>NETCAPKI_CERT_STORE_TYPE_MEMORY</option>
+        </select>
+      </td>
+      <td> 证书库名称：storeName
+        <select id="selectType2" name="selectType2">
+          <option value="my" selected="selected">NETCAPKI_CERT_STORE_NAME_MY</option>
+          <option value="other">NETCAPKI_CERT_STORE_NAME_OTHERS</option>
+          <option value="ca">NETCAPKI_CERT_STORE_NAME_CA</option>
+          <option value="root">NETCAPKI_CERT_STORE_NAME_ROOT</option>
+        </select>
+      </td>
+      <td> 证书用途:certType
+        <select id="selectType3" name="selectType3">
+          <option value=0 selected="selected">NETCAPKI_CERTTYPE_ALL:所有</option>
+          <option value=1>NETCAPKI_CERT_PURPOSE_ENCRYPT:加密</option>
+          <option value=2>NETCAPKI_CERT_PURPOSE_SIGN:签名</option>
+        </select>
+      </td>
+      <td> 证书颁发机构类型:netcaType
+        <select id="selectType4" name="selectType4">
+          <option value=0 selected="selected">NETCAPKI_NETCA_ALL</option>
+          <option value=1>NETCAPKI_NETCA_NETCACERT</option>
+          <option value=2>NETCAPKI_NETCA_OTHERCERT</option>
+        </select>
+      </td>
+      <td><input type="button" value="证书库" onClick="return testgetStoreCerts()">
+      </td>
+    </tr>
+    <tr>
+      <td><input type="button" value="选择证书" onClick="return testchooseStoreCerts()">
+      </td>
+    </tr>
+    <tr>
+      <td><input type="button" value="从设备集中所有符合条件的证书" 
+            onClick="return testchooseDeviceSetCerts()">
+      </td>
+    </tr>
+    <tr>
+      <td><input type="button" value="解析指定证书" 
+            onClick="return testgetCertInfo()">
+      </td>
+    </tr>
+
+
+    <tr>
+      <td  bgcolor="#00CCCC"  colspan="5">证书应用测试</td>
+    </tr>
+    <tr>
+      <td  colspan="5">
+	  	<input type="text" id="textOld" name="textOld" value="原文">
+        <br>
+        <TEXTAREA id="textData" name="textData" rows="3"  cols="130" ></TEXTAREA>
+        <br>
+        <input type="button" value="签名"  onclick="return signPKCS7EX();">
+        签名值如下： <br>
+        <TEXTAREA id="textSignData" name="textSignData" rows="5"  cols="130" ></TEXTAREA>
+        <br>
+        <input type="button" value="验证" LANGUAGE=javascript  onclick="return verifyPKCS7EX();">
+        <br>
+      </td>
+    <tr>
+
+  <br>
+</form>
+</BODY>
+</HTML>

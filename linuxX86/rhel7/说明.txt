@@ -1,0 +1,1 @@
+libnetca_url.so和libnetca_xml使用rhel6的版本

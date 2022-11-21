@@ -1,0 +1,8 @@
+[TassVsm]
+class=NETWORK
+sopath=${LD_LIBRARY_PATH}/libtassvsmprov.so
+type=108
+Server=1
+MultiDevice=1
+signature=hLonHKwnfdJ6dUsbaZjqpwvDswMRpqRxpSbHv9nFpr8AWzDKVL8dY14NuOgGOaGD+VOWgKYF2HLcfqQnx/z2P7YAP8UUWD/cksnQCrZWE0rXZxcxSGOtgBk1gk6pV24F3RqlY3H32Pwyr7pVVvzvhE4SHcPMYA1hI4k6QJNoqu4=
+displayName=江南天安云密码机

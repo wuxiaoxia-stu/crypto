@@ -1,0 +1,85 @@
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+
+import net.netca.pki.Freeable;
+import net.netca.pki.global.*;
+public class EnvelopedDataEncrypt {
+
+	public static void main(String[] args) throws Exception{
+		if(args.length!=3) {
+            System.out.println("Usage: java EnvelopedDataEncrypt certFileName clearText cipherTextFileName");
+            return;
+        }
+		String certFileName=args[0];
+		byte[] clear=args[1].getBytes("UTF-8");
+		String fileName=args[2];
+		
+		byte[] certData=readFile(certFileName);
+		
+		Pki pki=getPkiObject();
+        if(pki==null) {
+        	System.out.println("no pki implementation");
+            return;
+        }
+        X509Certificate cert=null;
+        try{
+        	cert=pki.decodeCert(certData);
+        	byte[] env=pki.envelopedDataEncrypt(cert, clear);
+        	save(fileName,env);
+	        System.out.println("Success");
+ 
+        } finally {
+        	if (cert instanceof Freeable) {
+        		((Freeable)cert).free();
+        	}
+        	
+        	if (pki instanceof Freeable) {
+        		((Freeable)pki).free();
+        	}
+        }
+	}
+
+	private static byte[] readFile(String fileName) throws Exception{
+		File file=new File(fileName);
+		
+		long fileLen=file.length();
+		if(fileLen>=Integer.MAX_VALUE) {
+			throw new Exception("file too big");
+		}
+		int len=(int)fileLen;
+		byte[] data=new byte[len];
+		FileInputStream fIn=new FileInputStream(file);
+		
+		try{
+			if (fIn.read(data)!=len) {
+				throw new Exception("read file fail");
+			}
+			return data;
+		} finally {
+			fIn.close();
+		}
+	}
+	
+	private static void save(String fileName,byte[] data) throws Exception{
+		FileOutputStream fOut=new FileOutputStream(fileName);
+		try {
+			fOut.write(data);
+		} finally {
+			fOut.close();
+		}
+	}
+	
+	private static Pki getPkiObject() throws Exception{
+		String name=System.getProperty("pkiName");
+		if(name==null) {
+			name="netca";
+		}
+		String param=System.getProperty("pkiParam");
+		if(param==null) {
+			return Pki.getInstance(name);
+		} else {
+			return Pki.getInstance(name,param);
+		}
+	}
+}

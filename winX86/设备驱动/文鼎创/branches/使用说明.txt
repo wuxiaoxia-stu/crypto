@@ -1,0 +1,3 @@
+这个dll文件是给测评中心演示使用，只有在白名单文件“ESKeyProv.dll.ini”记录的序列号才能读到
+
+ESKeyProv.dll.ini放在路径C:\Program Files\NETCA\NETCA_Devices下面（32位和64位操作系统，ESKeyProv.dll.ini都是放在这个目录下）

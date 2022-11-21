@@ -1,0 +1,10 @@
+[DXinDevice]
+class=NETWORK
+sopath=/usr/lib64/libdjdeviceprov.so
+type=113
+mustLogin=0
+ECB2CBC=0
+ECB2CTR=1
+Server=1
+signature=KDFBrtN96v3PLhe1tpLGegtyb9Kb0BNOBlNQ2xQz8JtTuqMKCbt5vjjPYqjwlowDFP7JGjBIPi1VV9jKLgjfAEJdzT+ReOOmSqQkT1rTrzWg21WuJYQJrjPKfemjctDbON0WBKLs9mYnCyE7ZeBaA1BT65r6cJ6uI7504q0eyfw=
+displayName=东进加密机

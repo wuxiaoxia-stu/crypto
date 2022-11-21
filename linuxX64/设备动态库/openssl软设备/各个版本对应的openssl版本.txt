@@ -1,0 +1,8 @@
+1.3.1°æ±¾£º
+windows 1.1.1c
+°²×¿    1.1.0h
+rhel5   0.9.8b
+rhel6   1.0.1e
+rhel7   1.0.2k
+rhel8   1.1.1
+ubuntu18 1.1.1

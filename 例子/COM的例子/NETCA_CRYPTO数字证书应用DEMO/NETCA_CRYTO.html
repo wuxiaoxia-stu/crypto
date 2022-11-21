@@ -1,0 +1,307 @@
+<HTML>
+<head>
+
+
+
+<script src="NETCA_CRYPTO.js"></script>
+<SCRIPT ID=clientEventHandlersJS LANGUAGE=javascript>
+<!--
+
+function isInstall() {//输入姆印，选择证书
+   
+	   var isOK=IsObjInstalled();
+	   if(isOK==true){
+	   	alert("控件安装成功！");
+	   }
+	   else{
+	   	alert("控件安装失败！");
+	   }
+   
+}
+function getCert() {//输入姆印，选择证书
+   try{
+	   var cert=getCertByThumbprint(frmdemo.text1.value);
+	   if(cert!=null){
+	        //alert("成功");
+	   	cert.Display();
+	   }
+   }
+   catch (e)
+   {
+		alert("测试不成功!"+e.description);
+		return null;
+   }   
+}
+
+function selectCert() {
+   try{
+	   var cert=getX509CertificateBySelect();
+	   if(cert!=null){
+	   	cert.Display();
+	   }
+    }
+   catch (e)
+   {
+		alert("测试不成功!"+e.description);
+		return null;
+   }  
+}
+
+function selectCertNetCA() {
+   try{
+
+	   var cert=getX509Certificate(NETCAPKI_CERT_STORE_NAME_MY,true);
+	   if(cert!=null){
+	   	cert.Display();
+	   }
+    }
+   catch (e)
+   {
+		alert("测试不成功!"+e.description);
+		return null;
+   }  
+}
+
+
+function certInfo() {
+   var certtrump=getCertInfo();
+   frmdemo.text1.value=certtrump;
+   
+}
+
+function signV() {
+   try{
+        alert("签名原文=" + frmdemo.textOld.value)
+   	frmdemo.textData.value=sign(frmdemo.textOld.value);
+   	alert("签名结果Base64编码内容=" + frmdemo.textData.value);
+   }
+   catch (e)
+   {
+		alert("测试不成功!"+e.description);
+		return null;
+   }
+}
+
+function verifyV() {
+   try{
+
+         alert("要验证签名Base64编码内容=" + frmdemo.textData.value);	
+         var signinfo=frmdemo.textData.value;
+         if(signinfo.length ==0 )
+         {
+           alert("要验证签名Base64编码内容为空,不能验证");
+           return null;
+         }
+         
+	   var rt=verify(frmdemo.textOld.value,frmdemo.textData.value);
+	   
+	   if(rt==-1){
+	   	alert("安装不成功!");
+	   }
+	   else if(rt==-2){
+	   	alert("验证签名失败");
+	   }
+
+	   else if(rt==0){
+	   	alert("验证通过");
+	   }
+   }
+   catch (e)
+   {
+		alert("测试不成功!"+e.description);
+		return null;
+   }
+   
+}
+
+function signMutiV(){
+   try{
+	   var oCert=getX509Certificate(NETCAPKI_CERT_STORE_NAME_MY,true);
+	   if(oCert==null){
+			alert("未选择证书!");
+			return null;
+	   }
+	   var rt=signMuti(frmdemo.textOld.value,oCert,frmdemo.textMax.value);
+	   if(rt!=0){
+	   	alert("验证没通过！");
+	   }
+   }
+   catch (e)
+   {
+		alert("测试不成功!" +e.description);
+		return null;
+   }
+}
+
+
+function signpkcs7V() {
+   try{
+        alert("签名原文=" + frmdemo.textOld2.value)
+   	frmdemo.textData2.value=signpkcs7(frmdemo.textOld2.value);
+   	alert("SignedData签名结果Base64编码内容=" + frmdemo.textData2.value);
+   }
+   catch (e)
+   {
+		alert("测试不成功!"+e.description);
+		return null;
+   }
+}
+
+function envV() {
+   try{
+ 
+        alert("加密原文=" + frmdemo.textOld1.value)
+   	frmdemo.textData1.value=env(frmdemo.textOld1.value);
+   	alert("加密结果Base64编码内容=" + frmdemo.textData1.value);
+   }
+   catch (e)
+   {
+		alert("测试不成功!"+e.description);
+		return null;
+   }
+}
+
+function devV() {
+   try{
+	   var rt=dev(frmdemo.textData1.value);
+	   
+	   if(rt==null){
+	   	alert("安装不成功!");
+	   }
+	   else {
+	        alert("解密通过！解密后的原文=" + rt);
+	   	frmdemo.textOld1.value=rt;
+	   	
+	   }
+   }
+   catch (e)
+   {
+		alert("测试不成功!"+e.description );
+		return null;
+   }
+}
+
+function envelopV() {
+   try{
+ 
+        alert("数字信封加密原文=" + frmdemo.textOld3.value)
+   	frmdemo.textData3.value=EnvelopEnc(frmdemo.textOld3.value);
+   	alert("数字信封加密结果Base64编码内容=" + frmdemo.textData3.value);
+   }
+   catch (e)
+   {
+		alert("测试不成功!"+e.description);
+		return null;
+   }
+}
+
+function developV() {
+   frmdemo.textOld4.value=""
+   try{
+	   alert("要解密的数字信封Base64编码内容=" + frmdemo.textData3.value);   
+	   frmdemo.textOld4.value=EnvelopDec(frmdemo.textData3.value);
+
+	        alert("数字信封解码后原文=" +frmdemo.textOld4.value);
+
+   }
+   catch (e)
+   {
+		alert("测试不成功!"+e.description );
+		return null;
+   }
+}
+
+
+function devMutiV(){
+   try{
+	   var oCert=getX509Certificate(NETCAPKI_CERT_STORE_NAME_MY,false);
+	   if(oCert==null){
+			alert("未选择证书!");
+			return null;
+	   }
+	   var rt=devMuti(frmdemo.textOld1.value,oCert,frmdemo.textMax1.value);
+	   if(rt!=0){
+	   	alert("解密没通过！");
+	   }
+   }
+   catch (e)
+   {
+		alert("测试不成功!" +e.description);
+		return null;
+   }
+}
+//-->
+</SCRIPT>
+</head>
+<BODY>
+<!--
+<OBJECT id="test" classid="clsid:11E27019-33D7-4B76-B73C-11DB7F496813" 
+CODEBASE="test.dll" style="WIDTH: 5px; HEIGHT: 5px " border=1 visible=0>
+
+</OBJECT>;DISPLAY: none--><!---->
+
+
+
+<form name=frmdemo >
+<table border=0 align=center width=60%>
+<caption><font size="6" color="#n65ei7" >NETCA_CRYTOCOM数字证书应用DEMO </font> </caption>
+<tr><td width=100%>
+<br><hr>功能一：证书选择<br>
+<input type="button" value="控件安装检测" LANGUAGE=javascript  onclick="return isInstall()">
+<br>
+<br><hr>功能二：证书选择<br>
+
+<input type="button" value="选择签名证书" LANGUAGE=javascript  onclick="return selectCert()">
+
+<input type="button" value="选择网证通签名证书" LANGUAGE=javascript  onclick="return selectCertNetCA()"><br>
+<br><hr>功能三：证书解析<br>
+<input type="button" value="网证通签名证书解析" LANGUAGE=javascript  onclick="return certInfo()"><br>
+
+<br>
+请输入证书姆印<input type=text size=60 id=text1 name=text1 value=""><input type="button" value="输入姆印，选择证书" LANGUAGE=javascript  onclick="return getCert()">
+<br>
+
+<br><hr>功能四：证书签名方式(1)..简单签名和验证<br>
+<input type="text" size=50 id=textOld name=textOld value="原文">
+<input type="hidden"  id=textData name=textData value="">
+<input type="button" value="签名" LANGUAGE=javascript  onclick="return signV();">
+<input type="button" value="验证" LANGUAGE=javascript  onclick="return verifyV();"> 
+<br>
+请输入签名次数:<input type=text size=5 id=textMax name=textMax value="5">
+<input type="button" value="多次签名验证" LANGUAGE=javascript  onclick="return signMutiV();"><br>
+<br><hr>功能五：证书签名方式(2)..pkcs7签名方式和验证<br>
+<input type="text" size=50 id=textOld2 name=textOld2 value="签名原文">
+<input type="hidden"  id=textData2 name=textData2 value="">
+<input type="button" value="签名验证" LANGUAGE=javascript  onclick="return signpkcs7V();">
+<br>
+
+<br><hr>功能六：证书加密解密(1)..简单加密和解密<br>
+<br> <font size="3" color="#n65ei7" >注:加密->用加密证书的公钥, 解密->用加密证书的私钥(介质需输入PIN码解密)</font>
+<hr>
+<input type="text" size=50 id=textOld1 name=textOld1 value="原文">
+<input type="hidden" size=50 id=textData1 name=textData1 value="">
+
+<input type="button" value="加密" LANGUAGE=javascript  onclick="return envV();">
+<input type="button" value="解密" LANGUAGE=javascript  onclick="return devV();">
+
+<br>
+请输入加密次数:<input type=text size=5 id=textMax1 name=textMax1 value="5">
+<input type="hidden" size=50 id=textOld5 name=textOld5 value="">
+<input type="button" value="多次加密解密" LANGUAGE=javascript  onclick="return devMutiV();"><br>
+<hr>
+
+<br><hr>功能七：数字信封加密解密<br>
+<input type="text" size=50 id=textOld3 name=textOld3 value="数字信封原文">
+<input type="hidden" size=50 id=textData3 name=textData3 value="">
+<br>
+<input type="button" value="数字信封加密" LANGUAGE=javascript  onclick="return envelopV();">
+<input type="button" value="数字信封解密" LANGUAGE=javascript  onclick="return developV();">
+<input type="hidden" size=50 id=textOld4 name=textOld4 value="">
+<hr>
+</td></tr>
+
+
+</table>
+<br>
+</form>
+</BODY></HTML>

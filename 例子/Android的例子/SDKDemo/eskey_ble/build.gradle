@@ -1,0 +1,2 @@
+configurations.maybeCreate("default")
+artifacts.add("default", file('eskey_ble.1.1.1.aar'))

@@ -1,0 +1,5 @@
+libsrj1401prov.so的签名值（DeviceStore文件记录最新的签名值）:
+
+2021年3月9日更新
+Revision:64281
+YdW5yZ8PoMJJHwT6XZADav7OD04EqPLWrvQFSn0m+iUvmOWggT9dJdC0hRMNPCnnEfcw5/scsYhdHoD5Q4aXNjCF0Czv1LYPg3UDmYYJMkr0Az5IqbH94idUEUik7irtnW1i2/rWwjYMP+o6KQ326AhswA7ZleTWY7ZXXg3ektM=

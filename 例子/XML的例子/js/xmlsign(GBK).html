@@ -1,0 +1,321 @@
+<HTML>
+	<HEAD>
+		<SCRIPT LANGUAGE=javascript>
+			var NETCA_XMLCOM_SIGNATURE_C14N_WITHOUT_COMMETNTS		=1;
+			var NETCA_XMLCOM_SIGNATURE_C14N_WITH_COMMENTS			=2;
+			var NETCA_XMLCOM_SIGNATURE_EXCLUSIVE_C14N_WITHOUT_COMMETNTS   	=3;
+			var NETCA_XMLCOM_SIGNATURE_EXCLUSIVE_C14N_WITH_COMMENTS  	=4;
+			var NETCA_XMLCOM_SIGNATURE_C14NV1_1_WITHOUT_COMMETNTS   	=6;
+			var NETCA_XMLCOM_SIGNATURE_C14NV1_1_WITH_COMMENTS   		=7;
+			
+
+			var NETCA_XMLCOM_SIGNATURE_ALGORITHM_RSA_SHA1			=65;
+			var NETCA_XMLCOM_SIGNATURE_ALGORITHM_RSA_SHA256			= 68;
+			var NETCA_XMLCOM_SIGNATURE_ALGORITHM_RSA_SHA512		= 70;
+			var NETCA_XMLCOM_SIGNATURE_ALGORITHM_SM2_SM3			= 83;
+
+			var NETCA_XMLCOM_SIGNATURE_ALGORITHM_SHA1			= 1;
+			var NETCA_XMLCOM_SIGNATURE_ALGORITHM_SHA256			= 4;
+			var NETCA_XMLCOM_SIGNATURE_ALGORITHM_SHA512			= 6;
+			var NETCA_XMLCOM_SIGNATURE_ALGORITHM_SM3			= 8;
+
+			var NETCA_XMLCOM_SIGNATURE_TRANSFORM_BASE64			= 16;
+			var NETCA_XMLCOM_SIGNATURE_TRANSFORM_XPATH_FILTER		= 32;
+			var NETCA_XMLCOM_SIGNATURE_TRANSFORM_ENVELOPED_SIGNATURE	= 48;
+
+			function sign()
+			{
+				if(form1.xmltemplate.value.length==0)
+				{
+					alert("没有输入XML模板");
+					return;
+				}
+
+				if(form1.signCert.value.length==0)
+				{
+					alert("没有输入签名证书");
+					return;
+				}
+
+				try
+				{
+					var builder=new ActiveXObject("NETCA_XMLCOM.Factory");
+					var doc=builder.CreateXMLDocumentObject();
+					alert("1");
+					doc.LoadXML(form1.xmltemplate.value,"GBK");
+					alert("2");
+							
+					var root=doc.GetRootElementNode();
+					var signList=root.GetElementList("Signature","http://www.w3.org/2000/09/xmldsig#")
+					if (signList.Count==0)
+					{
+						alert("没有XML签名节点");
+						return;
+					}
+					else if(signList.Count>1)
+					{
+						alert("XML签名节点太多");
+						return;
+					}
+
+					var signNode=signList.Item(1);
+					var xmlsign=builder.CreateXMLSignatureObject();
+					xmlsign.CanonicalizationMethod=NETCA_XMLCOM_SIGNATURE_C14N_WITHOUT_COMMETNTS;
+					xmlsign.SignatureMethod=NETCA_XMLCOM_SIGNATURE_ALGORITHM_RSA_SHA1;
+          				var tramf=builder.CreateTransformObject();
+         				 tramf.Algorithm = NETCA_XMLCOM_SIGNATURE_TRANSFORM_ENVELOPED_SIGNATURE;
+          				var tramfs=builder.CreateTransformsObject();
+         				 tramfs.Add(tramf);
+					var ref=builder.CreateReferenceObject();
+					ref.DigestMethod=NETCA_XMLCOM_SIGNATURE_ALGORITHM_SHA1;
+					ref.URI="";
+					ref.Transforms=tramfs;
+
+					var refs=builder.CreateReferencesObject();
+					refs.Add(ref);					
+					
+					xmlsign.References=refs;					
+
+					signCert=form1.signCert.value;
+					xmlsign.Sign(signNode, signCert);
+					
+					form1.xmlsignature.value=doc.Encode(0,"GBK");
+
+				}	
+				catch(e)
+				{
+					alert("XML签名出错，错误原因是"+e.description);
+					return;
+				}
+			}
+
+
+
+
+			function GetC14NAlgoName(algo)
+			{
+				switch(algo)
+				{
+				case NETCA_XMLCOM_SIGNATURE_C14N_WITHOUT_COMMETNTS:
+					return "XMLC14N";
+				case NETCA_XMLCOM_SIGNATURE_C14N_WITH_COMMENTS:
+					return "XMLC14N With Comments";
+				case NETCA_XMLCOM_SIGNATURE_EXCLUSIVE_C14N_WITHOUT_COMMETNTS:
+					return  "EXC XMLC14N";
+				case NETCA_XMLCOM_SIGNATURE_EXCLUSIVE_C14N_WITH_COMMENTS:
+					return "XMLC14N With Comments";
+				case NETCA_XMLCOM_SIGNATURE_C14NV1_1_WITHOUT_COMMETNTS:
+					return "XMLC14N V1.1";
+				case NETCA_XMLCOM_SIGNATURE_C14NV1_1_WITH_COMMENTS:
+					return "XMLC14N V1.1 With Comments";
+				default:
+				return " Unknown XML C14N Algo (" + algo +")";
+				}
+			}
+
+			function GetHashAlgoName(algo)
+			{
+				switch(algo)
+				{
+				case NETCA_XMLCOM_SIGNATURE_ALGORITHM_SHA1:
+					return "SHA1";
+				case NETCA_XMLCOM_SIGNATURE_ALGORITHM_SHA256:
+					return "SHA256";
+				case NETCA_XMLCOM_SIGNATURE_ALGORITHM_SHA512:
+					return "SHA512";
+				case NETCA_XMLCOM_SIGNATURE_ALGORITHM_SM3:
+					return "SM3";
+				default:
+					return " Unknown Hash Algo (" + algo + ")";
+				}
+			}
+
+			function GetSignAlgoName(algo)
+			{
+				switch(algo)
+				{
+				case NETCA_XMLCOM_SIGNATURE_ALGORITHM_RSA_SHA1:
+					return "SHA1WithRSA";
+				case NETCA_XMLCOM_SIGNATURE_ALGORITHM_RSA_SHA256:
+					return "SHA256WithRSA";
+				case NETCA_XMLCOM_SIGNATURE_ALGORITHM_RSA_SHA512:
+					return "SHA512WithRSA";
+				case NETCA_XMLCOM_SIGNATURE_ALGORITHM_SM2_SM3:
+					return "SM3WithSM2";
+				default:
+					return " Unknown Sign Algo (" + algo + ")";
+				}
+			}
+
+			function GetTransformAlgoName(algo)
+			{
+				switch(algo)
+				{
+				case NETCA_XMLCOM_SIGNATURE_C14N_WITHOUT_COMMETNTS:
+					return "XMLC14N";
+				case NETCA_XMLCOM_SIGNATURE_C14N_WITH_COMMENTS:
+					return "XMLC14N With Comments";
+				case NETCA_XMLCOM_SIGNATURE_EXCLUSIVE_C14N_WITHOUT_COMMETNTS:
+					return  "EXC XMLC14N";
+				case NETCA_XMLCOM_SIGNATURE_EXCLUSIVE_C14N_WITH_COMMENTS:
+					return "XMLC14N With Comments";
+				case NETCA_XMLCOM_SIGNATURE_C14NV1_1_WITHOUT_COMMETNTS:
+					return "XMLC14N V1.1";
+				case NETCA_XMLCOM_SIGNATURE_C14NV1_1_WITH_COMMENTS:
+					return "XMLC14N V1.1 With Comments";
+				case NETCA_XMLCOM_SIGNATURE_TRANSFORM_BASE64:
+					return "Base64";
+				case NETCA_XMLCOM_SIGNATURE_TRANSFORM_XPATH_FILTER:
+					return "XPath Filter";
+				case NETCA_XMLCOM_SIGNATURE_TRANSFORM_ENVELOPED_SIGNATURE:
+					return "Enveloped Signature";
+				default:
+					return " Unknown Transform Algo (" + algo + ")";
+				}
+			}
+			
+			function TransformString(tran)
+			{
+				return "Transform Algo: " + GetTransformAlgoName(tran.Algorithm) +"\n";
+			}
+			
+			function TransformsString(trans)
+			{
+				var i;
+				var count;
+				var str="";
+				count=trans.Count;
+				for(i=1;i<=count;i++)
+				{	
+					str+= "Transform " + i +":\n";
+					str+=TransformString(trans.Item(i));
+				}
+				return str;
+			}
+			
+			
+			
+			function ReferenceString(ref)
+			{
+				var str="";
+				var util=new ActiveXObject("NetcaPki.Utilities");
+				if (ref.Id.length!=0)
+				{
+					str+="Id: " + ref.Id+"\n";
+				}
+				str+="URI: " + ref.URI+"\n";
+				str+="Hash Algo: " + GetHashAlgoName(ref.DigestMethod)+"\n";
+				str+="Hash Value: " + util.BinaryToHex(ref.DigestValue)+"\n";
+				
+				if(ref.Transforms!=null)
+				{
+					str+=TransformsString(ref.Transforms);
+				}
+				return str;
+			}
+
+
+			function ReferencesString(refs)
+			{
+				var i;
+				var count;
+				var str="";
+				count=refs.Count;
+				for(i=1;i<=count;i++)
+				{	
+					str+= "Reference  " + i + ":\n";
+					str+=ReferenceString(refs.Item(i));
+				}
+				return str;
+			}			
+
+
+				
+
+			
+			
+		function XMLSignInfo(xmlsign)
+		{
+			var c14nalgo;
+			var signalgo;
+			
+			var str="";
+			c14nalgo=xmlsign.CanonicalizationMethod;
+			str+= "C14N Algo: " + GetC14NAlgoName(c14nalgo) +"\n";
+
+			signalgo=xmlsign.SignatureMethod;
+			str+= "Sign Algo: " + GetSignAlgoName(signalgo) +"\n";
+
+			str+=ReferencesString(xmlsign.References);
+
+			var id=xmlsign.SignatureValueId;
+			if  (id.length!=0)
+			{
+				str+= "SignatureValue Id: " + id +"\n";
+			}			
+			return str;
+		}
+				
+
+			
+			function verify()
+			{
+				if(form1.xmlsignature.value.length==0)
+				{
+					alert("没有输入XML签名");
+					return;
+				}
+
+				try
+				{
+					var builder=new ActiveXObject("NETCA_XMLCOM.Factory");
+					var doc=builder.CreateXMLDocumentObject();
+					doc.LoadXML(form1.xmlsignature.value,"GBK")
+							
+					var root=doc.GetRootElementNode();
+					var signList=root.GetElementList("Signature","http://www.w3.org/2000/09/xmldsig#")
+					if (signList.Count==0)
+					{
+						alert("没有XML签名节点");
+						return;
+					}
+					else if(signList.Count>1)
+					{
+						alert("XML签名节点太多");
+						return;
+					}
+
+					var signNode=signList.Item(1);
+					
+					var xmlsign=builder.CreateXMLSignatureObject();					
+					var signCert=form1.signCert.value;
+					xmlsign.SetVerifyCert(signCert);
+					xmlsign.Verify(signNode);
+					alert("XML签名验证成功");
+
+					form1.xmlsigninfo.value=XMLSignInfo(xmlsign);
+
+
+				}	
+				catch(e)
+				{
+					alert("XML签名出错，错误原因是"+e.description);
+					return;
+				}
+			}
+
+		</SCRIPT>
+	</HEAD>
+	<FORM id="form1">
+		XML模板：<TEXTAREA name="xmltemplate" id="xmltemplate" rows="10" cols="60"></TEXTAREA><BR/>
+		签名证书：<TEXTAREA name="signCert" id="signCert" rows="5" cols="60"></TEXTAREA><BR/>
+		XML签名：<TEXTAREA name="xmlsignature" id="xmlsignature" rows="15" cols="60"></TEXTAREA><BR/>
+		XML签名信息：<TEXTAREA name="xmlsigninfo" id="xmlsigninfo" rows="15" cols="60"></TEXTAREA><BR/>
+		<INPUT type="button" value="签名" LANGUAGE=javascript  onclick="return sign();">		
+		<INPUT type="button" value="验证" LANGUAGE=javascript  onclick="return verify();">
+
+	</FORM>
+	<BODY>
+	</BODY>
+</HTML>
+

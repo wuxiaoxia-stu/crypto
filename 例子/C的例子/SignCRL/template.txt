@@ -1,0 +1,52 @@
+{
+	"_keypair":{
+        "deviceType":11,
+        "deviceSn":"android",
+        "pwd":"12345678",
+        "keypairType":2,
+        "keypairLabel":"20895E42-09D2-4072-93C7-3FA13FA8D6B9"
+    },
+	"_issuerCertFileName":"2.cer",
+	"_crlFileName":"1.crl",
+    "signatureAlgorithm":{
+        "algo":"SHA256WithRSAEncryption",
+        "param":"NULL"
+    },
+    "nextUpdate":{
+        "type":"interval",
+        "value":{
+            "day":7
+        }
+    },
+    "revokedCertificates":[
+        {
+            "serialNumber":"1234",
+            "revocationDate":"20180102135427Z",
+            "extensions":[
+                {
+                    "name":"Reason Code",
+                    "value":"certificateHold"
+                }
+            ]
+        }
+	],
+    "extensions":[
+        {
+            "name":"Authority Key Identifier",
+            "encodeType":"default",
+            "value":"issuer_issuer_sn"
+        },
+        {
+            "name":"CRL Number",
+            "value":"00ac1234"
+        },
+        {
+            "name":"Issuing Distribution Point",
+            "critical":true,
+            "value":{
+                "onlyContainsUserCerts":true
+            }
+        }
+    ]
+    
+}

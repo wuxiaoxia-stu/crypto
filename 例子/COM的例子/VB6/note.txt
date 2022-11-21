@@ -1,0 +1,10 @@
+1.NetcaPkiLib.Certificate的sign 找不到私钥可能原因
+注册表里的
+HKEY_LOCAL_MACHINE\SOFTWARE\NETCA\PKI
+   ValueName: SilentPinKeys; 多字符串值
+         FEITIAN ePassNG RSA Cryptographic Service Provider
+EnterSafe ePass3003 CSP for WZT V1.0
+HaiTai Cryptographic Service Provider
+M&W eKey XCSP
+M&W eKey XCSP V3
+

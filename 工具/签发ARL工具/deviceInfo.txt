@@ -1,0 +1,3 @@
+{
+	"_keypair":{"deviceType":101,"deviceSn":"SJY03B","pwd":"12345678","keypairType":1,"keypairLabel":"RSA_1"}
+}

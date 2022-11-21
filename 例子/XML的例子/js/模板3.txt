@@ -1,0 +1,5 @@
+<report>
+<name>orgname1</name>
+<address>address</address>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#"/>
+</report>

@@ -1,0 +1,10 @@
+[SC34-C5K]
+class=PCI
+sopath=/usr/lib/libsanseccryptomodule.so
+type=106
+mustLogin=0
+ECB2CBC=0
+ECB2CTR=0
+Server=1
+signature=rL+WDXKHry/O7qzvB6ZVYFlqrRgtTD5PZ6xSFfSEcNe0pEPEQhrRZv7mWHCDHS7b56EDVraJZw7cgkJXwQUIGNjFplSdBxz9qfOsWh+U4BPipWhkvDF8ixqkdgoICReADC4Jp01p8V14o4RLh4o03l4aCRJZa4g8xw0Gi4PSZlc=
+displayName=三未信安密码卡
